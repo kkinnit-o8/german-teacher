@@ -1,0 +1,35 @@
+# dependencies
+/node_modules
+
+# Next.js build output
+/.next/
+/out/
+/build
+*.tsbuildinfo
+next-env.d.ts
+
+# secrets: never commit the OpenRouter key
+.env*
+
+# local progress database and generated dictionary database
+/data/*.sqlite
+/data/*.sqlite-*
+/data/*.db
+/data/backups/
+
+# raw dictionary downloads (large; rebuilt with npm run build:dict)
+/data/raw/
+
+# build markers written by start.cmd
+/.build-stamp
+
+# testing
+/coverage
+/test-results/
+/playwright-report/
+/tests/e2e/.data/
+
+# misc
+.DS_Store
+*.pem
+npm-debug.log*

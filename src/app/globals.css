@@ -1,0 +1,256 @@
+@import "tailwindcss";
+
+/* Theme: data-theme="light" | "dark" on <html>, set before paint by an inline script.
+   Without it the system preference decides. */
+:root {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --surface-2: #f3f1ec;
+  --border: #e3dfd6;
+  --text: #1f2328;
+  --muted: #5d6470;
+  --accent: #6d28d9;
+  --accent-soft: #ede7fb;
+  --accent-text: #ffffff;
+  --good: #15803d;
+  --bad: #b91c1c;
+  --warn: #b45309;
+  /* gender colours: der blue, die red, das green, plural amber */
+  --g-m: #1d5fd1;
+  --g-f: #c2262e;
+  --g-n: #15803d;
+  --g-pl: #b45309;
+  /* unlearned words */
+  --unlearned: #7c3aed;
+  --gloss: #6b4fb8;
+  --focus: #2563eb;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15171c;
+    --surface: #1d2027;
+    --surface-2: #252932;
+    --border: #343a46;
+    --text: #e8e6e1;
+    --muted: #a3a9b5;
+    --accent: #a78bfa;
+    --accent-soft: #2e2747;
+    --accent-text: #15171c;
+    --good: #4ade80;
+    --bad: #f87171;
+    --warn: #fbbf24;
+    --g-m: #7cb0ff;
+    --g-f: #ff8a8f;
+    --g-n: #6fdc8c;
+    --g-pl: #f7b955;
+    --unlearned: #c4a7ff;
+    --gloss: #c9b6ff;
+    --focus: #7cb0ff;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #15171c;
+  --surface: #1d2027;
+  --surface-2: #252932;
+  --border: #343a46;
+  --text: #e8e6e1;
+  --muted: #a3a9b5;
+  --accent: #a78bfa;
+  --accent-soft: #2e2747;
+  --accent-text: #15171c;
+  --good: #4ade80;
+  --bad: #f87171;
+  --warn: #fbbf24;
+  --g-m: #7cb0ff;
+  --g-f: #ff8a8f;
+  --g-n: #6fdc8c;
+  --g-pl: #f7b955;
+  --unlearned: #c4a7ff;
+  --gloss: #c9b6ff;
+  --focus: #7cb0ff;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-text: var(--accent-text);
+  --color-good: var(--good);
+  --color-bad: var(--bad);
+  --color-warn: var(--warn);
+  --color-g-m: var(--g-m);
+  --color-g-f: var(--g-f);
+  --color-g-n: var(--g-n);
+  --color-g-pl: var(--g-pl);
+  --font-sans: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.55;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ---------- German text rendering ---------- */
+
+.de-text {
+  line-height: 2.35; /* room for glosses above words */
+}
+.de-text.no-gloss {
+  line-height: 1.6;
+}
+
+.de-word {
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0 1px;
+  transition: background-color 0.12s;
+}
+.de-word:hover,
+.de-word.group-hover {
+  background: var(--accent-soft);
+}
+
+.de-unlearned {
+  text-decoration: underline dotted var(--unlearned);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+ruby.de-ruby {
+  ruby-position: over;
+  ruby-align: center;
+}
+ruby.de-ruby rt {
+  font-size: 0.56em;
+  line-height: 1.1;
+  color: var(--gloss);
+  font-weight: 500;
+  letter-spacing: 0;
+  white-space: nowrap;
+  user-select: none;
+  text-transform: none;
+}
+
+/* gender colours (can be switched off with .no-gender on <body>) */
+.g-m {
+  color: var(--g-m);
+}
+.g-f {
+  color: var(--g-f);
+}
+.g-n {
+  color: var(--g-n);
+}
+.g-pl {
+  color: var(--g-pl);
+}
+.no-gender .g-m,
+.no-gender .g-f,
+.no-gender .g-n,
+.no-gender .g-pl {
+  color: inherit;
+}
+
+/* ---------- small UI helpers ---------- */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 1.1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  transition: background-color 0.12s, border-color 0.12s, opacity 0.12s;
+}
+.btn:hover:not(:disabled) {
+  background: var(--surface-2);
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-text);
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent);
+  opacity: 0.9;
+}
+.btn-ghost {
+  border-color: transparent;
+  background: transparent;
+}
+.btn-sm {
+  min-height: 2.1rem;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.85rem;
+  border-radius: 10px;
+}
+
+.input {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
