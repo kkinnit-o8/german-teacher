@@ -31,8 +31,9 @@ export function NewFreeChat() {
           });
           const j = await r.json();
           setBusy(false);
-          if (j.conversation?.id) router.push(`/chats/${j.conversation.id}`);
+          // on an error, stay here and show it (the empty conversation is not listed)
           if (j.error) setError(j.error.message);
+          else if (j.conversation?.id) router.push(`/chats/${j.conversation.id}`);
         }}
       />
       {error && <p className="whitespace-pre-wrap text-bad">{error}</p>}

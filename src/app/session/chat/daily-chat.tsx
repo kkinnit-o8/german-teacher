@@ -1,10 +1,41 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import type { ConversationView } from "@/lib/server/chat";
 import { ChatView, type ChatError } from "@/components/chat/chat-view";
 import { TopicPicker } from "@/components/chat/topic-picker";
 import { StepHeader } from "@/components/session/step-header";
+
+/** No internet or no key today: skip the conversation (the day then doesn't count for the streak). */
+function SkipChat() {
+  const router = useRouter();
+  const [confirming, setConfirming] = useState(false);
+  if (!confirming)
+    return (
+      <button className="btn btn-ghost btn-sm text-muted" onClick={() => setConfirming(true)}>
+        Can’t chat today?
+      </button>
+    );
+  return (
+    <div className="card space-y-2 p-4 text-sm">
+      <p>You can skip the conversation today, but then today won’t count for your streak.</p>
+      <button
+        className="btn btn-sm"
+        onClick={async () => {
+          await fetch("/api/day/step", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ step: "chat", status: "skipped" }),
+          });
+          router.push("/session/summary");
+        }}
+      >
+        Skip the conversation today
+      </button>
+    </div>
+  );
+}
 
 export function DailyChat() {
   const [conv, setConv] = useState<ConversationView | null>(null);
@@ -74,6 +105,7 @@ export function DailyChat() {
               </button>
             </div>
           )}
+          <SkipChat />
         </>
       )}
     </div>

@@ -54,7 +54,8 @@ export function loadDay(day: string): DayState {
 
 export function saveDay(s: DayState) {
   s.updatedAt = nowIso();
-  const completed = STEPS.every((k) => s.steps[k] !== "todo");
+  // a day counts for the streak when every step is finished; the conversation can't be skipped for it
+  const completed = STEPS.every((k) => s.steps[k] !== "todo") && s.steps.chat !== "skipped";
   if (completed && !s.completedAt) s.completedAt = nowIso();
   getDb()
     .prepare(

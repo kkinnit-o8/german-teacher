@@ -11,6 +11,8 @@ import {
   quizScore,
   rateWord,
   reviewRate,
+  completedDays,
+  setStep,
   startLearn,
   startQuiz,
   startReview,
@@ -123,5 +125,17 @@ describe("quick check", () => {
     markLearned(id, D1);
     expect(rateWord(id, "again", D2, "quiz").counted).toBe(true);
     expect(rateWord(id, "good", D2, "review").counted).toBe(false);
+  });
+});
+
+describe("finishing a day", () => {
+  it("counts a day when every step is finished, but not with a skipped conversation", () => {
+    for (const step of ["review", "learn", "quiz", "chat"] as const) setStep(D1, step, step === "review" ? "skipped" : "done");
+    expect(completedDays()).toEqual([]);
+    setStep(D1, "summary", "done");
+    expect(completedDays()).toEqual([D1]);
+    for (const step of ["review", "learn", "quiz", "summary"] as const) setStep(D2, step, "done");
+    setStep(D2, "chat", "skipped");
+    expect(completedDays()).toEqual([D1]);
   });
 });
