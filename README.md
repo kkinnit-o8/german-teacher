@@ -19,12 +19,34 @@ Everything runs on your own computer. Only the teacher chat and City Adventures 
 
 ## Start on Windows (the easy way)
 
-### 1. Install Node.js (once)
+### One command
+
+Have your [OpenRouter key](#your-openrouter-key) ready. Open **PowerShell** or **Command Prompt** (Start menu → type
+"PowerShell"), paste this line and press Enter:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -Command "[Net.ServicePointManager]::SecurityProtocol='Tls12'; irm https://raw.githubusercontent.com/kkinnit-o8/german-teacher/HEAD/setup.ps1 | iex"
+```
+
+It runs [`setup.ps1`](setup.ps1), which:
+
+- installs Node.js and Git with winget if they are missing (Windows asks for permission),
+- downloads the app to `C:\Users\<you>\german-teacher`,
+- runs `start.cmd` (see step 3 below): it puts a **German Teacher** shortcut on your desktop, asks for your key, builds
+  the app and opens it in your browser.
+
+From then on, double-click **German Teacher** on your desktop. To update the app, paste the same command again: it
+downloads the new version and keeps your progress and key. If it says Node.js or Git "is not available in this window
+yet", close the window, open a new one and paste the command again.
+
+### Or step by step
+
+#### 1. Install Node.js (once)
 
 Go to [nodejs.org](https://nodejs.org), download the **LTS** version for Windows and install it with the default
 options.
 
-### 2. Get the app (once)
+#### 2. Get the app (once)
 
 Either download it from GitHub as a ZIP (green **Code** button → **Download ZIP**) and unzip it, or, if you use Git,
 open PowerShell and run:
@@ -33,7 +55,7 @@ open PowerShell and run:
 git clone https://github.com/kkinnit-o8/german-teacher.git
 ```
 
-### 3. Double-click `start.cmd`
+#### 3. Double-click `start.cmd`
 
 The first start takes a few minutes. The window:
 
@@ -50,7 +72,7 @@ open with a message.
 Windows may ask whether Node.js may use the network: allow **private networks** if you want to use the app on your
 phone (see below).
 
-### 4. From now on: the desktop shortcut
+### From now on: the desktop shortcut
 
 Double-click **German Teacher** on your desktop to start the app. The shortcut runs `start.cmd`, so it works the same
 way.
