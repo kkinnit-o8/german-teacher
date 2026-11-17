@@ -256,3 +256,74 @@ ruby.de-ruby rt {
     transition-duration: 0.001ms !important;
   }
 }
+
+/* ---------- City Adventures characters ---------- */
+.gt-breathe {
+  animation: gt-breathe 4.2s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+@keyframes gt-breathe {
+  0%,
+  100% {
+    transform: translateY(0) scaleY(1);
+  }
+  50% {
+    transform: translateY(1.5px) scaleY(0.996);
+  }
+}
+.gt-eye {
+  animation: gt-blink 5.2s infinite;
+  animation-delay: var(--blink-delay, 0s);
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes gt-blink {
+  0%,
+  94%,
+  100% {
+    transform: scaleY(1);
+  }
+  96.5% {
+    transform: scaleY(0.08);
+  }
+}
+.gt-talking .gt-mouth-open {
+  animation: gt-talk-open 0.34s steps(1, end) infinite;
+}
+.gt-talking .gt-mouth-closed {
+  animation: gt-talk-closed 0.34s steps(1, end) infinite;
+}
+@keyframes gt-talk-open {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes gt-talk-closed {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.gt-speaking-glow {
+  filter: drop-shadow(0 0 10px rgba(255, 220, 120, 0.55));
+}
+@media (prefers-reduced-motion: reduce) {
+  .gt-breathe,
+  .gt-eye,
+  .gt-talking .gt-mouth-open,
+  .gt-talking .gt-mouth-closed {
+    animation: none !important;
+  }
+  .gt-talking .gt-mouth-open {
+    opacity: 0;
+  }
+  .gt-talking .gt-mouth-closed {
+    opacity: 1;
+  }
+}

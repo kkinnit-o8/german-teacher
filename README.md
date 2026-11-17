@@ -216,6 +216,26 @@ recognition. Edge and Chrome support both (their speech recognition is an online
 Firefox has no speech recognition. **Speaking mode** makes the chat hands-free; **silent mode** (header) turns off all
 sound and replaces listening questions. If no German voice is installed, Settings explains how to add one in Windows.
 
+## City Adventures
+
+**Play** in the menu. Five places (café, Späti, restaurant, train station, weekly market), two missions each: order a
+coffee for you and a friend, buy a return ticket to Hamburg, haggle with Oma Hilde over a kilo of apples. Each mission
+has a briefing with its goals, key words (marked if you haven't learned them yet) and the characters you'll meet. It
+doesn't touch your daily session.
+
+- **Characters** are drawn in code (animated SVG: they breathe, blink, move their mouths while they talk and change
+  expression) and each has a personality, a voice (pitch and speed) and du or Sie. **Meet the cast** shows everyone
+  with all six expressions.
+- **The game master** is an AI model that plays the characters and replies in JSON: who says what (with an
+  expression), which goals you just completed, a hint, and whether you were rude. Character lines are rendered like the
+  teacher's, with glosses on words you haven't learned.
+- **Rules are decided by the app, not the AI.** 3 hearts of patience. English costs a heart (only clear cases: at
+  least two English words, most of the message English, at most one German word). Rudeness costs a heart. Saying *du*
+  to someone who expects *Sie* gets a warning the first time and costs a heart after that. With no hearts left the
+  character gives up and you can try again.
+- **Stars:** one for completing the mission, one for losing at most one heart, one for using at most one hint.
+- New words from a mission can be added to tomorrow's words with one click.
+
 ## Data sources and licences
 
 - **Dictionary, grammar, IPA and inflected forms:** German entries of

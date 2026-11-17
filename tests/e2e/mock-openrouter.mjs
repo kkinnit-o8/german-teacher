@@ -73,8 +73,10 @@ function gameReply(body) {
       mission_complete: false,
     });
   }
-  const n = users.length - 1;
-  const done = goals.slice(0, Math.min(goals.length, n * 2));
+  // only well-behaved turns move the mission on (no du, no English, no insults)
+  const good = (t) => !/\b(du|idiot)\b/i.test(t) && !/\b(i|want|please)\b/i.test(t);
+  const n = users.slice(1).filter((m) => good(m.content)).length;
+  const done = good(last) ? goals.slice(0, Math.min(goals.length, n * 2)) : [];
   const complete = done.length >= goals.length;
   return JSON.stringify({
     lines: [
