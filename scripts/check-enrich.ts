@@ -23,6 +23,9 @@ const arg = (n: string, d: number) => {
 };
 const from = arg("--from", 1);
 const to = arg("--to", 100000);
+const keysFileIdx = process.argv.indexOf("--keys");
+const keyList: Set<string> | null =
+  keysFileIdx > 0 ? new Set(JSON.parse(fs.readFileSync(process.argv[keysFileIdx + 1], "utf8")) as string[]) : null;
 const cands: CompactCandidate[] = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "..", "data", "build", "candidates.json"), "utf8"),
 );
@@ -103,7 +106,9 @@ for (const [i, line] of lines.entries()) {
     console.log(`${where}: ${errs.join("; ")}`);
   }
 }
-const missing = cands.filter((c) => c.rank >= from && c.rank <= to && !seen.has(c.key));
+const missing = cands.filter((c) =>
+  keyList ? keyList.has(c.key) && !seen.has(c.key) : c.rank >= from && c.rank <= to && !seen.has(c.key),
+);
 if (missing.length) {
   problems++;
   console.log(`missing ${missing.length} candidates: ${missing.slice(0, 20).map((c) => c.key).join(", ")}${missing.length > 20 ? " ..." : ""}`);

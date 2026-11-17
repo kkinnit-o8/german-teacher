@@ -1,0 +1,3057 @@
+{
+ "checked": 2400,
+ "perfect": 2338,
+ "missingTarget": 0,
+ "withLaterWords": 62,
+ "items": {
+  "der|art": {
+   "later": [
+    "Mann",
+    "haben",
+    "ein",
+    "Auto"
+   ]
+  },
+  "und|conj": {
+   "later": [
+    "ich",
+    "haben",
+    "ein",
+    "Bruder",
+    "Schwester"
+   ]
+  },
+  "in|prep": {
+   "later": [
+    "ich",
+    "sein"
+   ]
+  },
+  "sein|verb": {
+   "later": [
+    "ich",
+    "hier"
+   ]
+  },
+  "ein|art": {
+   "later": [
+    "ich",
+    "haben",
+    "Frage"
+   ]
+  },
+  "ich|pron": {},
+  "zu|prep": {
+   "later": [
+    "gehen"
+   ]
+  },
+  "haben|verb": {
+   "later": [
+    "Hund"
+   ]
+  },
+  "von|prep": {
+   "later": [
+    "Freund"
+   ]
+  },
+  "nicht|adv": {
+   "later": [
+    "kein",
+    "Zeit",
+    "heute"
+   ]
+  },
+  "werden|verb": {
+   "later": [
+    "es",
+    "kalt"
+   ]
+  },
+  "mit|prep": {
+   "later": [
+    "gehen",
+    "du"
+   ]
+  },
+  "es|pron": {
+   "later": [
+    "gut"
+   ]
+  },
+  "auf|prep": {
+   "later": [
+    "Buch",
+    "Tisch"
+   ]
+  },
+  "an|prep": {
+   "later": [
+    "denken",
+    "du"
+   ]
+  },
+  "für|prep": {
+   "later": [
+    "du"
+   ]
+  },
+  "er|pron": {
+   "later": [
+    "heißen"
+   ]
+  },
+  "sich|pron": {
+   "later": [
+    "freuen"
+   ]
+  },
+  "sie|pron": {
+   "later": [
+    "mein",
+    "Schwester"
+   ]
+  },
+  "bei|prep": {},
+  "auch|adv": {
+   "later": [
+    "kommen"
+   ]
+  },
+  "können|verb": {
+   "later": [
+    "du",
+    "helfen"
+   ]
+  },
+  "du|pron": {
+   "later": [
+    "wie",
+    "heißen"
+   ]
+  },
+  "dieser|det": {
+   "later": [
+    "Buch",
+    "gut"
+   ]
+  },
+  "dass|conj": {
+   "later": [
+    "wissen",
+    "hier"
+   ]
+  },
+  "wir|pron": {
+   "later": [
+    "hier"
+   ]
+  },
+  "so|adv": {
+   "later": [
+    "gut"
+   ]
+  },
+  "wie|adv": {
+   "later": [
+    "gehen"
+   ]
+  },
+  "aber|conj": {
+   "later": [
+    "wollen"
+   ]
+  },
+  "aus|prep": {
+   "later": [
+    "kommen"
+   ]
+  },
+  "nach|prep": {
+   "later": [
+    "Arbeit",
+    "gehen",
+    "Haus"
+   ]
+  },
+  "noch|adv": {
+   "later": [
+    "Zeit"
+   ]
+  },
+  "ihr|det": {
+   "later": [
+    "Hund"
+   ]
+  },
+  "sein|det": {
+   "later": [
+    "Hund"
+   ]
+  },
+  "nur|adv": {
+   "later": [
+    "Bruder"
+   ]
+  },
+  "wenn|conj": {
+   "later": [
+    "kommen",
+    "da"
+   ]
+  },
+  "was|pron": {},
+  "oder|conj": {
+   "later": [
+    "kommen",
+    "bleiben"
+   ]
+  },
+  "um|prep": {
+   "later": [
+    "gehen",
+    "acht"
+   ]
+  },
+  "man|pron": {
+   "later": [
+    "hier",
+    "gut",
+    "essen"
+   ]
+  },
+  "kein|det": {
+   "later": [
+    "Zeit"
+   ]
+  },
+  "als|conj": {
+   "later": [
+    "groß"
+   ]
+  },
+  "über|prep": {
+   "later": [
+    "sprechen"
+   ]
+  },
+  "müssen|verb": {
+   "later": [
+    "gehen"
+   ]
+  },
+  "mein|det": {
+   "later": [
+    "Bruder"
+   ]
+  },
+  "da|adv": {},
+  "alle|det": {
+   "later": [
+    "hier"
+   ]
+  },
+  "dann|adv": {
+   "later": [
+    "erst",
+    "essen",
+    "gehen"
+   ]
+  },
+  "geben|verb": {
+   "later": [
+    "Buch"
+   ]
+  },
+  "Jahr|noun": {
+   "later": [
+    "zwei",
+    "hier"
+   ]
+  },
+  "schon|adv": {},
+  "vor|prep": {
+   "later": [
+    "warten",
+    "Haus"
+   ]
+  },
+  "ja|adv": {
+   "later": [
+    "kommen",
+    "gleich"
+   ]
+  },
+  "gut|adj": {
+   "later": [
+    "Essen",
+    "sehr"
+   ]
+  },
+  "sollen|verb": {
+   "later": [
+    "machen"
+   ]
+  },
+  "wollen|verb": {},
+  "gehen|verb": {
+   "later": [
+    "Haus"
+   ]
+  },
+  "kommen|verb": {
+   "later": [
+    "heute"
+   ]
+  },
+  "machen|verb": {
+   "later": [
+    "heute"
+   ]
+  },
+  "sehr|adv": {},
+  "durch|prep": {
+   "outside": [
+    "durchkommen"
+   ]
+  },
+  "Sie|pron": {},
+  "viel|adv": {},
+  "hier|adv": {},
+  "doch|adv": {},
+  "mal|adv": {
+   "outside": [
+    "herkommen"
+   ]
+  },
+  "bis|conj": {},
+  "immer|adv": {},
+  "jetzt|adv": {},
+  "sehen|verb": {},
+  "wieder|adv": {},
+  "sagen|verb": {},
+  "finden|verb": {},
+  "ganz|adj": {},
+  "jeder|det": {},
+  "unser|det": {},
+  "groß|adj": {},
+  "ihr|pron": {},
+  "dein|det": {},
+  "alles|pron": {},
+  "weit|adj": {},
+  "mehr|adv": {},
+  "stehen|verb": {},
+  "einfach|adj": {},
+  "gegen|prep": {},
+  "also|adv": {
+   "outside": [
+    "mitkommen"
+   ]
+  },
+  "ohne|prep": {},
+  "neu|adj": {},
+  "ab|prep": {},
+  "denn|conj": {},
+  "Mensch|noun": {},
+  "damit|conj": {},
+  "dessen|pron": {},
+  "lassen|verb": {},
+  "ander|adj": {},
+  "weil|conj": {},
+  "wer|pron": {},
+  "Mann|noun": {},
+  "seit|prep": {},
+  "etwas|pron": {},
+  "wo|adv": {},
+  "selbst|adv": {},
+  "nun|adv": {},
+  "Frau|noun": {},
+  "mögen|verb": {},
+  "nichts|pron": {},
+  "leben|verb": {},
+  "Kind|noun": {},
+  "welcher|det": {},
+  "nehmen|verb": {},
+  "hoch|adj": {},
+  "ob|conj": {},
+  "Tag|noun": {},
+  "dürfen|verb": {},
+  "zwischen|prep": {},
+  "beide|pron": {},
+  "wissen|verb": {},
+  "unter|prep": {},
+  "dabei|adv": {},
+  "Zeit|noun": {},
+  "tun|verb": {},
+  "dort|adv": {},
+  "sondern|conj": {},
+  "wenig|adj": {},
+  "wirklich|adv": {},
+  "bleiben|verb": {},
+  "richtig|adj": {},
+  "erst|adv": {},
+  "warum|adv": {},
+  "lang|adj": {},
+  "Stadt|noun": {},
+  "vielleicht|adv": {},
+  "zeigen|verb": {},
+  "Land|noun": {},
+  "liegen|verb": {},
+  "genau|adj": {},
+  "stellen|verb": {
+   "outside": [
+    "hinstellen"
+   ]
+  },
+  "denken|verb": {},
+  "eigen|adj": {},
+  "dazu|adv": {},
+  "meinen|verb": {},
+  "wohl|adv": {},
+  "Leute|noun": {},
+  "Teil|noun": {},
+  "Fall|noun": {},
+  "spielen|verb": {},
+  "sowie|conj": {},
+  "gerade|adv": {},
+  "wichtig|adj": {},
+  "fragen|verb": {},
+  "dafür|adv": {},
+  "Uhr|noun": {},
+  "deutsch|adj": {},
+  "Welt|noun": {},
+  "Spiel|noun": {},
+  "bereits|adv": {},
+  "nie|adv": {},
+  "natürlich|adv": {},
+  "Haus|noun": {},
+  "fahren|verb": {},
+  "einmal|adv": {},
+  "bekommen|verb": {},
+  "Seite|noun": {},
+  "Arbeit|noun": {},
+  "heute|adv": {
+   "later": [
+    "frei"
+   ]
+  },
+  "brauchen|verb": {},
+  "wegen|prep": {},
+  "hören|verb": {},
+  "zwei|num": {},
+  "klar|adj": {
+   "outside": [
+    "mitkommen"
+   ]
+  },
+  "bringen|verb": {},
+  "eigentlich|adv": {},
+  "schnell|adj": {},
+  "Macht|noun": {
+   "later": [
+    "Geld"
+   ]
+  },
+  "gar|adv": {},
+  "gleich|adj": {},
+  "stark|adj": {},
+  "Woche|noun": {},
+  "erste|adj": {},
+  "recht|adj": {},
+  "jemand|pron": {},
+  "etwa|adv": {},
+  "Problem|noun": {},
+  "heißen|verb": {},
+  "Geld|noun": {},
+  "kennen|verb": {},
+  "kurz|adj": {},
+  "klein|adj": {},
+  "schön|adj": {},
+  "halten|verb": {},
+  "sprechen|verb": {},
+  "weiter|adv": {
+   "outside": [
+    "weitermachen"
+   ]
+  },
+  "einige|det": {},
+  "davon|adv": {},
+  "nein|intj": {},
+  "solcher|det": {},
+  "glauben|verb": {},
+  "Person|noun": {},
+  "jedoch|adv": {},
+  "während|conj": {},
+  "zurück|adv": {
+   "outside": [
+    "zurückkommen"
+   ]
+  },
+  "zusammen|adv": {},
+  "setzen|verb": {},
+  "laufen|verb": {},
+  "schreiben|verb": {},
+  "darauf|adv": {},
+  "Name|noun": {},
+  "Frage|noun": {},
+  "möglich|adj": {},
+  "echt|adj": {},
+  "Art|noun": {},
+  "sogar|adv": {},
+  "zwar|adv": {},
+  "verstehen|verb": {},
+  "Wort|noun": {},
+  "Geschichte|noun": {},
+  "paar|det": {},
+  "allerdings|adv": {},
+  "arbeiten|verb": {},
+  "Grund|noun": {},
+  "Thema|noun": {},
+  "Bild|noun": {},
+  "folgen|verb": {},
+  "Monat|noun": {},
+  "Familie|noun": {},
+  "oft|adv": {},
+  "sicher|adj": {},
+  "allein|adj": {},
+  "helfen|verb": {},
+  "Minute|noun": {},
+  "Deutscher|noun": {},
+  "darüber|adv": {},
+  "verschieden|adj": {},
+  "schwer|adj": {},
+  "früh|adj": {},
+  "Sache|noun": {},
+  "Ende|noun": {},
+  "neben|prep": {},
+  "statt|prep": {},
+  "weg|adv": {},
+  "alt|adj": {},
+  "nah|adj": {},
+  "direkt|adj": {},
+  "führen|verb": {},
+  "danken|verb": {},
+  "besonders|adv": {},
+  "gelten|verb": {},
+  "erhalten|verb": {},
+  "lesen|verb": {},
+  "versuchen|verb": {},
+  "schaffen|verb": {},
+  "Hand|noun": {},
+  "gern|adv": {},
+  "bestehen|verb": {},
+  "eben|adv": {},
+  "enden|verb": {},
+  "einzig|adj": {},
+  "drei|num": {},
+  "sonst|adv": {},
+  "Beispiel|noun": {},
+  "politisch|adj": {},
+  "schlecht|adj": {},
+  "Weg|noun": {},
+  "bald|adv": {},
+  "Euro|noun": {},
+  "hin|adv": {
+   "outside": [
+    "hinwollen"
+   ]
+  },
+  "treffen|verb": {},
+  "Auto|noun": {},
+  "Leben|noun": {},
+  "Herr|noun": {},
+  "suchen|verb": {},
+  "Buch|noun": {},
+  "online|adj": {},
+  "gehören|verb": {},
+  "mehrere|det": {},
+  "Gruppe|noun": {},
+  "spät|adj": {},
+  "leicht|adj": {},
+  "Auge|noun": {},
+  "nennen|verb": {},
+  "Ort|noun": {},
+  "Freund|noun": {},
+  "je|adv": {},
+  "deshalb|adv": {},
+  "Polizei|noun": {},
+  "Gott|noun": {},
+  "voll|adj": {
+   "outside": [
+    "Platz"
+   ]
+  },
+  "Nacht|noun": {},
+  "deutlich|adj": {},
+  "weiß|adj": {},
+  "erreichen|verb": {},
+  "letzte|adj": {},
+  "außerdem|adv": {},
+  "beginnen|verb": {},
+  "okay|intj": {},
+  "daran|adv": {},
+  "Abend|noun": {},
+  "aktuell|adj": {},
+  "daher|adv": {},
+  "kaum|adv": {},
+  "ziehen|verb": {},
+  "Alter|noun": {},
+  "handeln|verb": {},
+  "scheinen|verb": {},
+  "bitte|intj": {},
+  "gemeinsam|adj": {},
+  "genug|adv": {},
+  "fast|adv": {},
+  "legen|verb": {
+   "outside": [
+    "Platz"
+   ]
+  },
+  "überhaupt|adv": {},
+  "Idee|noun": {},
+  "jung|adj": {},
+  "Mal|noun": {},
+  "Bereich|noun": {},
+  "freuen|verb": {},
+  "frei|adj": {},
+  "hinter|prep": {
+   "outside": [
+    "Platz"
+   ]
+  },
+  "anders|adv": {},
+  "Kopf|noun": {},
+  "Film|noun": {},
+  "öffentlich|adj": {
+   "outside": [
+    "Platz"
+   ]
+  },
+  "Anfang|noun": {},
+  "euer|det": {},
+  "rein|adj": {},
+  "Staat|noun": {},
+  "Team|noun": {
+   "outside": [
+    "zusammenarbeiten"
+   ]
+  },
+  "stimmen|verb": {},
+  "tragen|verb": {},
+  "ebenfalls|adv": {},
+  "Musik|noun": {},
+  "pro|prep": {},
+  "Million|noun": {},
+  "kaufen|verb": {},
+  "Vater|noun": {},
+  "falsch|adj": {},
+  "rund|adj": {},
+  "reden|verb": {},
+  "lieb|adj": {},
+  "bestimmt|adv": {},
+  "nachdem|conj": {},
+  "sofort|adv": {
+   "outside": [
+    "zurückkommen"
+   ]
+  },
+  "Mutter|noun": {},
+  "Video|noun": {},
+  "Gesellschaft|noun": {},
+  "folgend|adj": {},
+  "Sohn|noun": {},
+  "fühlen|verb": {},
+  "Krieg|noun": {},
+  "danach|adv": {},
+  "Mitglied|noun": {},
+  "endlich|adv": {},
+  "dritte|adj": {},
+  "damals|adv": {},
+  "vorstellen|verb": {},
+  "international|adj": {},
+  "nächster|adj": {},
+  "essen|verb": {
+   "outside": [
+    "zusammenessen"
+   ]
+  },
+  "offen|adj": {},
+  "Artikel|noun": {},
+  "egal|adj": {},
+  "Ergebnis|noun": {},
+  "Foto|noun": {},
+  "System|noun": {},
+  "lernen|verb": {},
+  "oben|adv": {},
+  "Möglichkeit|noun": {},
+  "Richtung|noun": {},
+  "Junge|noun": {},
+  "Partei|noun": {},
+  "besser|adj": {},
+  "Regierung|noun": {},
+  "hoffen|verb": {},
+  "gegenüber|prep": {
+   "outside": [
+    "Platz"
+   ]
+  },
+  "Eltern|noun": {},
+  "bisher|adv": {},
+  "lange|adv": {},
+  "aussehen|verb": {},
+  "selber|adv": {},
+  "Hilfe|noun": {},
+  "Wahl|noun": {},
+  "Stelle|noun": {},
+  "Preis|noun": {},
+  "her|adv": {
+   "outside": [
+    "herkommen"
+   ]
+  },
+  "trotzdem|adv": {},
+  "gewinnen|verb": {},
+  "anfangen|verb": {},
+  "allgemein|adj": {},
+  "toll|adj": {},
+  "Erfolg|noun": {},
+  "bitten|verb": {},
+  "Ziel|noun": {},
+  "Internet|noun": {},
+  "sozial|adj": {},
+  "Politik|noun": {},
+  "Bitte|noun": {},
+  "zunächst|adv": {},
+  "sitzen|verb": {},
+  "besondere|adj": {},
+  "oh|intj": {},
+  "darum|adv": {},
+  "Glück|noun": {},
+  "mancher|det": {},
+  "holen|verb": {},
+  "erzählen|verb": {},
+  "verlieren|verb": {},
+  "bieten|verb": {},
+  "Tod|noun": {},
+  "persönlich|adj": {},
+  "Kirche|noun": {},
+  "ähnlich|adj": {},
+  "schließlich|adv": {},
+  "Entwicklung|noun": {},
+  "sterben|verb": {},
+  "Form|noun": {},
+  "Mädchen|noun": {},
+  "Prozent|noun": {},
+  "aufnehmen|verb": {},
+  "fallen|verb": {},
+  "europäisch|adj": {},
+  "Folge|noun": {},
+  "vergessen|verb": {},
+  "Ding|noun": {},
+  "bedeuten|verb": {},
+  "Stunde|noun": {},
+  "Zahl|noun": {},
+  "Moment|noun": {},
+  "Stück|noun": {},
+  "Lage|noun": {},
+  "Zukunft|noun": {},
+  "Spaß|noun": {},
+  "Punkt|noun": {},
+  "los|adv": {},
+  "passen|verb": {},
+  "Angst|noun": {},
+  "Erfahrung|noun": {},
+  "sorgen|verb": {},
+  "kosten|verb": {},
+  "ziemlich|adv": {},
+  "weniger|adv": {},
+  "häufig|adj": {},
+  "schlagen|verb": {},
+  "Projekt|noun": {},
+  "Schule|noun": {},
+  "Gefühl|noun": {},
+  "entstehen|verb": {},
+  "Meinung|noun": {},
+  "hart|adj": {},
+  "bekannt|adj": {},
+  "Wohnung|noun": {},
+  "bevor|conj": {},
+  "manchmal|adv": {},
+  "völlig|adv": {},
+  "danke|intj": {},
+  "Morgen|noun": {},
+  "nutzen|verb": {},
+  "annehmen|verb": {},
+  "befinden|verb": {},
+  "fehlen|verb": {},
+  "Chance|noun": {},
+  "Interesse|noun": {},
+  "obwohl|conj": {},
+  "zweite|adj": {},
+  "Mai|noun": {},
+  "Mitte|noun": {
+   "outside": [
+    "Platz"
+   ]
+  },
+  "tatsächlich|adv": {},
+  "bisschen|adv": {},
+  "Versuch|noun": {},
+  "lieben|verb": {},
+  "Entscheidung|noun": {},
+  "erklären|verb": {},
+  "Zug|noun": {},
+  "September|noun": {},
+  "dadurch|adv": {},
+  "wann|adv": {},
+  "wieso|adv": {},
+  "Beitrag|noun": {},
+  "Job|noun": {},
+  "Verein|noun": {},
+  "erinnern|verb": {},
+  "Blick|noun": {},
+  "König|noun": {},
+  "erkennen|verb": {},
+  "wählen|verb": {},
+  "aufgrund|prep": {},
+  "innerhalb|prep": {},
+  "insgesamt|adv": {},
+  "zudem|adv": {},
+  "gesamt|adj": {},
+  "erfolgreich|adj": {},
+  "Sinn|noun": {},
+  "schauen|verb": {},
+  "Meter|noun": {},
+  "schließen|verb": {},
+  "irgendwie|adv": {},
+  "reichen|verb": {},
+  "Angebot|noun": {},
+  "Mitarbeiter|noun": {},
+  "außer|prep": {},
+  "meist|adv": {},
+  "vorbei|adv": {},
+  "zahlreich|adj": {},
+  "schlimm|adj": {},
+  "wahrscheinlich|adv": {},
+  "Gesetz|noun": {},
+  "Jahrhundert|noun": {},
+  "Sprache|noun": {},
+  "Dame|noun": {},
+  "erfahren|verb": {},
+  "raus|adv": {
+   "outside": [
+    "rausgehen"
+   ]
+  },
+  "dagegen|adv": {},
+  "ebenso|adv": {},
+  "wobei|adv": {},
+  "vier|num": {},
+  "erwarten|verb": {},
+  "Tier|noun": {},
+  "treten|verb": {
+   "outside": [
+    "zurücktreten"
+   ]
+  },
+  "früher|adv": {},
+  "entscheiden|verb": {},
+  "komplett|adj": {},
+  "wirken|verb": {},
+  "langsam|adj": {},
+  "Lösung|noun": {},
+  "Tochter|noun": {},
+  "interessant|adj": {},
+  "ansehen|verb": {},
+  "August|noun": {
+   "outside": [
+    "wegfahren"
+   ]
+  },
+  "Gedanke|noun": {},
+  "gestern|adv": {},
+  "unterstützen|verb": {},
+  "übernehmen|verb": {},
+  "verlassen|verb": {},
+  "November|noun": {},
+  "sowohl|conj": {},
+  "funktionieren|verb": {},
+  "Band|noun": {},
+  "Präsident|noun": {},
+  "Gesicht|noun": {},
+  "Spieler|noun": {},
+  "Wasser|noun": {},
+  "privat|adj": {},
+  "selten|adj": {},
+  "Region|noun": {},
+  "Höhe|noun": {
+   "later": [
+    "zwanzig"
+   ]
+  },
+  "morgen|adv": {},
+  "Bruder|noun": {},
+  "erscheinen|verb": {},
+  "niemand|pron": {},
+  "gleichzeitig|adv": {},
+  "absolut|adj": {},
+  "Dank|noun": {},
+  "April|noun": {},
+  "insbesondere|adv": {},
+  "Kampf|noun": {},
+  "na|intj": {},
+  "laut|adj": {},
+  "Antwort|noun": {},
+  "technisch|adj": {},
+  "zahlen|verb": {},
+  "zusätzlich|adj": {},
+  "ändern|verb": {},
+  "Oktober|noun": {},
+  "Juni|noun": {},
+  "Kunst|noun": {},
+  "benutzen|verb": {},
+  "bestimmen|verb": {},
+  "gering|adj": {},
+  "Programm|noun": {},
+  "Suche|noun": {},
+  "nämlich|adv": {},
+  "Unternehmen|noun": {},
+  "englisch|adj": {},
+  "bilden|verb": {},
+  "Leistung|noun": {},
+  "Sonntag|noun": {},
+  "unterschiedlich|adj": {},
+  "einsetzen|verb": {},
+  "Fehler|noun": {},
+  "Situation|noun": {},
+  "Text|noun": {},
+  "Markt|noun": {},
+  "Arzt|noun": {},
+  "Typ|noun": {},
+  "Sommer|noun": {},
+  "Vergleich|noun": {},
+  "zählen|verb": {},
+  "enthalten|verb": {
+   "outside": [
+    "viele"
+   ]
+  },
+  "Kreis|noun": {},
+  "Kultur|noun": {},
+  "Verbindung|noun": {},
+  "aufgeben|verb": {},
+  "starten|verb": {},
+  "wohnen|verb": {},
+  "berichten|verb": {},
+  "feststellen|verb": {},
+  "Bad|noun": {},
+  "Werk|noun": {},
+  "Satz|noun": {},
+  "links|adv": {},
+  "ausgehen|verb": {},
+  "zumindest|adv": {},
+  "übrigens|adv": {},
+  "ankommen|verb": {},
+  "Schüler|noun": {},
+  "derselbe|det": {},
+  "rufen|verb": {},
+  "Kunde|noun": {},
+  "Bank|noun": {},
+  "Sicherheit|noun": {},
+  "Zeitung|noun": {},
+  "warten|verb": {},
+  "Gefahr|noun": {},
+  "Liebe|noun": {},
+  "dauern|verb": {},
+  "rechts|adv": {},
+  "Klasse|noun": {
+   "later": [
+    "zwanzig"
+   ]
+  },
+  "wünschen|verb": {},
+  "hinaus|adv": {
+   "outside": [
+    "hinausgehen"
+   ]
+  },
+  "mindestens|adv": {},
+  "Fan|noun": {},
+  "normal|adj": {},
+  "Beginn|noun": {},
+  "Aufgabe|noun": {},
+  "schlafen|verb": {},
+  "Rede|noun": {},
+  "angeben|verb": {},
+  "Saison|noun": {},
+  "Hund|noun": {},
+  "bezahlen|verb": {},
+  "Firma|noun": {},
+  "halt|part": {},
+  "Körper|noun": {},
+  "Druck|noun": {},
+  "historisch|adj": {},
+  "Boden|noun": {},
+  "gefallen|verb": {},
+  "weiterhin|adv": {},
+  "überall|adv": {},
+  "klingen|verb": {},
+  "per|prep": {},
+  "Flüchtling|noun": {},
+  "Mannschaft|noun": {},
+  "Bahn|noun": {},
+  "teilen|verb": {},
+  "Linie|noun": {},
+  "plötzlich|adj": {},
+  "Bürger|noun": {},
+  "Politiker|noun": {},
+  "Wunsch|noun": {},
+  "Tor|noun": {},
+  "Tür|noun": {
+   "outside": [
+    "zumachen"
+   ]
+  },
+  "dennoch|adv": {},
+  "Dezember|noun": {},
+  "leid|adj": {},
+  "offiziell|adj": {},
+  "stattfinden|verb": {},
+  "Fuß|noun": {},
+  "Freitag|noun": {},
+  "nett|adj": {},
+  "Freundin|noun": {},
+  "erleben|verb": {
+   "outside": [
+    "Schönes"
+   ]
+  },
+  "Volk|noun": {},
+  "fordern|verb": {},
+  "Vertrag|noun": {},
+  "erneut|adv": {},
+  "glücklich|adj": {},
+  "Gast|noun": {
+   "outside": [
+    "viele"
+   ]
+  },
+  "wahr|adj": {},
+  "heiß|adj": {},
+  "fertig|adj": {},
+  "Januar|noun": {},
+  "jeweils|adv": {},
+  "vorher|adv": {},
+  "rot|adj": {},
+  "heutig|adj": {},
+  "Wochenende|noun": {},
+  "Luft|noun": {},
+  "Kritik|noun": {},
+  "Bericht|noun": {},
+  "Grad|noun": {
+   "later": [
+    "zwanzig"
+   ]
+  },
+  "fest|adj": {},
+  "passieren|verb": {},
+  "Fußball|noun": {},
+  "Serie|noun": {},
+  "Gebäude|noun": {},
+  "hängen|verb": {},
+  "Hotel|noun": {},
+  "bereit|adj": {},
+  "ergeben|verb": {},
+  "Nachricht|noun": {},
+  "Studium|noun": {},
+  "vorbereiten|verb": {},
+  "dank|prep": {},
+  "Produkt|noun": {},
+  "Februar|noun": {},
+  "heraus|adv": {},
+  "nochmal|adv": {},
+  "unten|adv": {},
+  "regelmäßig|adj": {},
+  "Sport|noun": {},
+  "Rolle|noun": {},
+  "Inhalt|noun": {},
+  "Autor|noun": {},
+  "Bevölkerung|noun": {},
+  "Straße|noun": {},
+  "Beziehung|noun": {},
+  "modern|adj": {},
+  "Wirtschaft|noun": {},
+  "lustig|adj": {},
+  "Ausbildung|noun": {},
+  "darin|adv": {},
+  "bestätigen|verb": {},
+  "bauen|verb": {},
+  "Besuch|noun": {},
+  "total|adj": {},
+  "teilweise|adv": {},
+  "Stimme|noun": {},
+  "Professor|noun": {},
+  "gelingen|verb": {},
+  "Gespräch|noun": {},
+  "Bedeutung|noun": {},
+  "Herz|noun": {},
+  "auftreten|verb": {},
+  "werfen|verb": {},
+  "Gericht|noun": {},
+  "anbieten|verb": {},
+  "beispielsweise|adv": {},
+  "deswegen|adv": {},
+  "mittlerweile|adv": {},
+  "weder|conj": {},
+  "verwenden|verb": {},
+  "ständig|adj": {},
+  "unbedingt|adv": {},
+  "fünf|num": {},
+  "Information|noun": {},
+  "gründen|verb": {},
+  "Hälfte|noun": {},
+  "verkaufen|verb": {},
+  "super|adj": {},
+  "stecken|verb": {},
+  "geschehen|verb": {},
+  "halb|adj": {},
+  "tief|adj": {},
+  "entwickeln|verb": {},
+  "Veranstaltung|noun": {},
+  "schwierig|adj": {},
+  "wert|adj": {},
+  "kriegen|verb": {},
+  "unterwegs|adv": {},
+  "wenigstens|adv": {},
+  "zuvor|adv": {},
+  "knapp|adj": {},
+  "Bewegung|noun": {},
+  "Wert|noun": {},
+  "anzeigen|verb": {},
+  "Lehrer|noun": {},
+  "tot|adj": {},
+  "Universität|noun": {},
+  "sogenannt|adj": {},
+  "einzeln|adj": {
+   "outside": [
+    "reinkommen"
+   ]
+  },
+  "vorhanden|adj": {
+   "outside": [
+    "Platz"
+   ]
+  },
+  "Sieg|noun": {},
+  "ernst|adj": {},
+  "jener|det": {},
+  "Ahnung|noun": {},
+  "indem|conj": {},
+  "zuerst|adv": {},
+  "Position|noun": {},
+  "feiern|verb": {},
+  "Karte|noun": {},
+  "öffnen|verb": {},
+  "Farbe|noun": {},
+  "Lied|noun": {},
+  "schwarz|adj": {},
+  "Kommentar|noun": {},
+  "Studie|noun": {},
+  "trinken|verb": {},
+  "Fest|noun": {},
+  "unterscheiden|verb": {},
+  "genauso|adv": {},
+  "lediglich|adv": {},
+  "soweit|conj": {},
+  "Nummer|noun": {},
+  "Wahrheit|noun": {},
+  "Chef|noun": {},
+  "amerikanisch|adj": {},
+  "merken|verb": {},
+  "kostenlos|adj": {},
+  "Bett|noun": {},
+  "Rest|noun": {},
+  "Prozess|noun": {},
+  "täglich|adj": {
+   "later": [
+    "zwanzig"
+   ]
+  },
+  "notwendig|adj": {},
+  "leider|adv": {},
+  "einladen|verb": {},
+  "schicken|verb": {},
+  "Unterstützung|noun": {},
+  "eher|adv": {},
+  "gewiss|adj": {},
+  "ausschließen|verb": {},
+  "drehen|verb": {},
+  "Gebiet|noun": {},
+  "hinweisen|verb": {},
+  "besitzen|verb": {},
+  "durchaus|adv": {},
+  "inzwischen|adv": {},
+  "niemals|adv": {},
+  "äußern|verb": {},
+  "Amt|noun": {},
+  "Aktion|noun": {},
+  "Raum|noun": {},
+  "Samstag|noun": {},
+  "cool|adj": {},
+  "Schluss|noun": {},
+  "Kollege|noun": {},
+  "Funktion|noun": {
+   "outside": [
+    "viele"
+   ]
+  },
+  "aufhören|verb": {},
+  "Natur|noun": {},
+  "malen|verb": {},
+  "Modell|noun": {},
+  "Regel|noun": {},
+  "Kraft|noun": {},
+  "ausgeben|verb": {},
+  "besuchen|verb": {},
+  "entsprechen|verb": {},
+  "Organisation|noun": {
+   "outside": [
+    "vielen"
+   ]
+  },
+  "verloren|adj": {},
+  "Gewinn|noun": {},
+  "einstellen|verb": {},
+  "Schutz|noun": {},
+  "Ordnung|noun": {},
+  "vermutlich|adv": {},
+  "Wald|noun": {},
+  "kämpfen|verb": {},
+  "bloß|adv": {},
+  "live|adv": {},
+  "Dollar|noun": {},
+  "Plan|noun": {},
+  "ruhig|adj": {},
+  "Fahrzeug|noun": {},
+  "ehrlich|adj": {},
+  "günstig|adj": {},
+  "Kontakt|noun": {},
+  "liefern|verb": {
+   "outside": [
+    "Ware"
+   ]
+  },
+  "Fenster|noun": {},
+  "laden|verb": {},
+  "übrig|adj": {},
+  "Größe|noun": {},
+  "darunter|adv": {},
+  "Freiheit|noun": {},
+  "entweder|conj": {},
+  "Test|noun": {},
+  "dumm|adj": {},
+  "wesentlich|adj": {},
+  "wissenschaftlich|adj": {},
+  "teuer|adj": {},
+  "Hintergrund|noun": {},
+  "Zusammenhang|noun": {},
+  "irgendetwas|pron": {},
+  "Patient|noun": {},
+  "national|adj": {},
+  "verdienen|verb": {},
+  "Donnerstag|noun": {},
+  "richten|verb": {},
+  "aufstellen|verb": {},
+  "sowas|pron": {},
+  "Geschäft|noun": {},
+  "steigen|verb": {},
+  "jedenfalls|adv": {},
+  "Handy|noun": {},
+  "Club|noun": {},
+  "lösen|verb": {},
+  "nachdenken|verb": {},
+  "dran|adv": {},
+  "speziell|adj": {},
+  "Start|noun": {},
+  "Gold|noun": {},
+  "Diskussion|noun": {},
+  "erfüllen|verb": {},
+  "anschauen|verb": {},
+  "gesund|adj": {},
+  "kalt|adj": {},
+  "Gewalt|noun": {},
+  "praktisch|adj": {},
+  "Freude|noun": {},
+  "töten|verb": {},
+  "Waffe|noun": {},
+  "ursprünglich|adj": {},
+  "Tisch|noun": {},
+  "Montag|noun": {},
+  "kennenlernen|verb": {},
+  "retten|verb": {},
+  "positiv|adj": {},
+  "verbinden|verb": {},
+  "App|noun": {},
+  "weltweit|adj": {},
+  "russisch|adj": {},
+  "Einfluss|noun": {},
+  "googeln|verb": {},
+  "gefährlich|adj": {},
+  "Szene|noun": {},
+  "irgendwann|adv": {},
+  "Dorf|noun": {},
+  "Energie|noun": {},
+  "Teilnehmer|noun": {},
+  "Bildung|noun": {},
+  "offenbar|adv": {},
+  "Künstler|noun": {},
+  "Zeichen|noun": {},
+  "Titel|noun": {},
+  "wirtschaftlich|adj": {},
+  "niedrig|adj": {},
+  "französisch|adj": {},
+  "verlangen|verb": {},
+  "Brief|noun": {},
+  "Post|noun": {},
+  "Insel|noun": {},
+  "unabhängig|adj": {},
+  "Version|noun": {},
+  "informieren|verb": {},
+  "Schwester|noun": {},
+  "beobachten|verb": {},
+  "daraus|adv": {},
+  "See|noun": {},
+  "Menge|noun": {},
+  "klassisch|adj": {},
+  "Star|noun": {},
+  "zuletzt|adv": {},
+  "Soldat|noun": {},
+  "Technik|noun": {},
+  "singen|verb": {},
+  "vollständig|adj": {},
+  "eröffnen|verb": {},
+  "stammen|verb": {},
+  "Stein|noun": {},
+  "froh|adj": {},
+  "empfehlen|verb": {},
+  "fliegen|verb": {},
+  "Dienst|noun": {},
+  "Tipp|noun": {},
+  "Kilometer|noun": {},
+  "antworten|verb": {},
+  "aufbauen|verb": {},
+  "Treffen|noun": {},
+  "Erinnerung|noun": {},
+  "bestellen|verb": {},
+  "Hoffnung|noun": {},
+  "Song|noun": {},
+  "melden|verb": {},
+  "Website|noun": {},
+  "gucken|verb": {},
+  "Partner|noun": {},
+  "Auswahl|noun": {},
+  "derzeit|adv": {},
+  "nötig|adj": {},
+  "eng|adj": {},
+  "Bein|noun": {},
+  "verantwortlich|adj": {},
+  "interessieren|verb": {},
+  "Konzept|noun": {},
+  "Autobahn|noun": {},
+  "Zeitpunkt|noun": {},
+  "genießen|verb": {},
+  "wechseln|verb": {},
+  "Vorteil|noun": {
+   "outside": [
+    "viele"
+   ]
+  },
+  "Schritt|noun": {},
+  "abgeben|verb": {},
+  "Sorge|noun": {},
+  "relativ|adj": {},
+  "sparen|verb": {},
+  "Show|noun": {},
+  "Rat|noun": {},
+  "Museum|noun": {},
+  "erstmals|adv": {},
+  "zerstören|verb": {
+   "outside": [
+    "viele"
+   ]
+  },
+  "herstellen|verb": {},
+  "Kamera|noun": {},
+  "Opfer|noun": {},
+  "Party|noun": {},
+  "ansprechen|verb": {},
+  "schwach|adj": {},
+  "wachsen|verb": {},
+  "beschreiben|verb": {},
+  "breit|adj": {},
+  "Winter|noun": {},
+  "derjenige|pron": {},
+  "Material|noun": {},
+  "anschließen|verb": {},
+  "Krankenhaus|noun": {},
+  "fangen|verb": {},
+  "Qualität|noun": {},
+  "Interview|noun": {},
+  "Anzahl|noun": {},
+  "erstmal|adv": {},
+  "immerhin|adv": {},
+  "Lust|noun": {},
+  "sobald|conj": {},
+  "solange|conj": {},
+  "präsentieren|verb": {},
+  "Polizist|noun": {},
+  "Grenze|noun": {},
+  "sammeln|verb": {},
+  "bezeichnen|verb": {},
+  "lachen|verb": {},
+  "grundsätzlich|adv": {},
+  "fernsehen|verb": {},
+  "Kaffee|noun": {},
+  "aktiv|adj": {},
+  "Bier|noun": {},
+  "unglaublich|adj": {},
+  "trotz|prep": {},
+  "bewusst|adj": {},
+  "österreichisch|adj": {},
+  "Urlaub|noun": {},
+  "Kontrolle|noun": {},
+  "außerhalb|prep": {},
+  "drin|adv": {},
+  "rechnen|verb": {},
+  "anschließend|adv": {},
+  "Datum|noun": {},
+  "typisch|adj": {},
+  "Werbung|noun": {},
+  "Sicht|noun": {},
+  "teilnehmen|verb": {},
+  "verhalten|verb": {},
+  "konkret|adj": {},
+  "Hinweis|noun": {},
+  "geboren|adj": {},
+  "landen|verb": {},
+  "Trainer|noun": {},
+  "Vorstellung|noun": {},
+  "naja|intj": {},
+  "bewegen|verb": {},
+  "Abschluss|noun": {},
+  "Betrieb|noun": {},
+  "warm|adj": {},
+  "kümmern|verb": {},
+  "menschlich|adj": {},
+  "Traum|noun": {},
+  "Netz|noun": {},
+  "geplant|adj": {},
+  "reich|adj": {},
+  "Generation|noun": {},
+  "Untersuchung|noun": {},
+  "leisten|verb": {},
+  "Essen|noun": {},
+  "draußen|adv": {},
+  "Jugend|noun": {},
+  "möglichst|adv": {},
+  "Anlage|noun": {
+   "outside": [
+    "E-Mail"
+   ]
+  },
+  "Ausgabe|noun": {},
+  "beenden|verb": {},
+  "komisch|adj": {},
+  "Schweizer|noun": {},
+  "Geburtstag|noun": {},
+  "großartig|adj": {},
+  "Feld|noun": {},
+  "Maschine|noun": {},
+  "Unfall|noun": {},
+  "traurig|adj": {},
+  "versprechen|verb": {},
+  "Flughafen|noun": {},
+  "Begriff|noun": {},
+  "Weise|noun": {},
+  "Reaktion|noun": {},
+  "abschließen|verb": {},
+  "benötigen|verb": {},
+  "entfernt|adj": {},
+  "vertreten|verb": {},
+  "stets|adv": {},
+  "Gegner|noun": {},
+  "frisch|adj": {},
+  "Nähe|noun": {},
+  "rennen|verb": {},
+  "greifen|verb": {},
+  "zufrieden|adj": {},
+  "Vorschlag|noun": {},
+  "irgendwo|adv": {},
+  "Konzert|noun": {},
+  "Basis|noun": {},
+  "Baby|noun": {},
+  "reagieren|verb": {},
+  "ausschließlich|adv": {},
+  "fein|adj": {},
+  "vergangen|adj": {},
+  "finanziell|adj": {},
+  "Methode|noun": {
+   "outside": [
+    "Lernen"
+   ]
+  },
+  "Berg|noun": {},
+  "Juli|noun": {},
+  "Eindruck|noun": {},
+  "kritisch|adj": {},
+  "dahin|adv": {},
+  "Vertreter|noun": {},
+  "Baum|noun": {},
+  "Figur|noun": {},
+  "prüfen|verb": {},
+  "Gerät|noun": {},
+  "Zusammenarbeit|noun": {},
+  "entfernen|verb": {},
+  "Risiko|noun": {},
+  "türkisch|adj": {},
+  "Zimmer|noun": {},
+  "treiben|verb": {},
+  "Hof|noun": {},
+  "betreffen|verb": {},
+  "Roman|noun": {},
+  "sieben|num": {},
+  "Büro|noun": {},
+  "perfekt|adj": {},
+  "Verkehr|noun": {},
+  "Religion|noun": {},
+  "Wissenschaft|noun": {},
+  "Schiff|noun": {},
+  "Umgebung|noun": {},
+  "vertrauen|verb": {},
+  "Telefon|noun": {},
+  "Park|noun": {},
+  "Zentrum|noun": {},
+  "Pferd|noun": {},
+  "üblich|adj": {},
+  "hinten|adv": {},
+  "Vergangenheit|noun": {},
+  "Gegensatz|noun": {},
+  "Tour|noun": {},
+  "riesig|adj": {},
+  "Termin|noun": {},
+  "Kategorie|noun": {},
+  "Literatur|noun": {},
+  "digital|adj": {},
+  "verschwinden|verb": {},
+  "Album|noun": {},
+  "Seele|noun": {},
+  "Wagen|noun": {},
+  "Leitung|noun": {
+   "outside": [
+    "besetzt"
+   ]
+  },
+  "Bus|noun": {},
+  "organisieren|verb": {},
+  "Meer|noun": {},
+  "Bahnhof|noun": {},
+  "zehn|num": {},
+  "Nachrichten|noun": {},
+  "angeblich|adj": {},
+  "vorkommen|verb": {},
+  "Forschung|noun": {},
+  "Frieden|noun": {},
+  "Zweck|noun": {},
+  "Beruf|noun": {},
+  "reisen|verb": {},
+  "Anschluss|noun": {},
+  "jährlich|adj": {},
+  "offensichtlich|adj": {},
+  "Ausstellung|noun": {},
+  "Unterschied|noun": {},
+  "brechen|verb": {},
+  "Praxis|noun": {},
+  "Kauf|noun": {},
+  "ermöglichen|verb": {},
+  "Theater|noun": {},
+  "geschlossen|adj": {},
+  "anrufen|verb": {},
+  "begreifen|verb": {},
+  "Schuh|noun": {},
+  "überlegen|verb": {},
+  "Witz|noun": {},
+  "vierte|adj": {},
+  "Temperatur|noun": {
+   "later": [
+    "zwanzig"
+   ]
+  },
+  "Katze|noun": {},
+  "Bürgermeister|noun": {},
+  "abschneiden|verb": {},
+  "veröffentlichen|verb": {},
+  "eintreten|verb": {},
+  "Stern|noun": {
+   "outside": [
+    "viele"
+   ]
+  },
+  "wunderbar|adj": {},
+  "Beweis|noun": {},
+  "verhindern|verb": {},
+  "Krankheit|noun": {},
+  "Behandlung|noun": {},
+  "Norden|noun": {},
+  "Reis|noun": {},
+  "Student|noun": {},
+  "Demokratie|noun": {},
+  "Liste|noun": {},
+  "zwingen|verb": {},
+  "Sendung|noun": {},
+  "Erklärung|noun": {},
+  "Charakter|noun": {},
+  "arm|adj": {},
+  "hingegen|adv": {},
+  "wiederum|adv": {},
+  "zugleich|adv": {},
+  "Mund|noun": {
+   "outside": [
+    "aufmachen"
+   ]
+  },
+  "Ansicht|noun": {},
+  "auffallen|verb": {},
+  "Licht|noun": {
+   "outside": [
+    "anmachen"
+   ]
+  },
+  "planen|verb": {},
+  "existieren|verb": {},
+  "Wein|noun": {},
+  "Gang|noun": {},
+  "Bedingung|noun": {
+   "outside": [
+    "pünktlich"
+   ]
+  },
+  "zurückkehren|verb": {},
+  "interessiert|adj": {},
+  "ersetzen|verb": {},
+  "irgendein|det": {},
+  "Jahrzehnt|noun": {},
+  "leiden|verb": {},
+  "Geschenk|noun": {},
+  "mitteilen|verb": {},
+  "begleiten|verb": {},
+  "Mehrheit|noun": {},
+  "diskutieren|verb": {},
+  "grün|adj": {},
+  "Blut|noun": {},
+  "geraten|verb": {},
+  "Umstand|noun": {},
+  "Leiter|noun": {},
+  "Ausland|noun": {},
+  "krank|adj": {},
+  "Zuschauer|noun": {
+   "outside": [
+    "viele"
+   ]
+  },
+  "beitragen|verb": {},
+  "Kurs|noun": {},
+  "entdecken|verb": {},
+  "tausend|num": {},
+  "Süden|noun": {},
+  "festhalten|verb": {},
+  "spannend|adj": {},
+  "Änderung|noun": {},
+  "beweisen|verb": {},
+  "drücken|verb": {},
+  "verpassen|verb": {
+   "outside": [
+    "beeilen"
+   ]
+  },
+  "Verantwortung|noun": {},
+  "klappen|verb": {},
+  "aufstehen|verb": {},
+  "Milliarde|noun": {},
+  "diesmal|adv": {
+   "outside": [
+    "pünktlich"
+   ]
+  },
+  "hoffentlich|adv": {},
+  "Nachbar|noun": {},
+  "somit|adv": {},
+  "herum|adv": {
+   "outside": [
+    "herumlaufen"
+   ]
+  },
+  "bisherig|adj": {},
+  "Veränderung|noun": {},
+  "abnehmen|verb": {},
+  "mitmachen|verb": {},
+  "Strom|noun": {},
+  "Gelegenheit|noun": {},
+  "traditionell|adj": {},
+  "filmen|verb": {},
+  "scharf|adj": {},
+  "erheblich|adj": {},
+  "Brücke|noun": {},
+  "beschäftigen|verb": {},
+  "klasse|adj": {},
+  "stimmt|intj": {},
+  "baden|verb": {},
+  "Tatsache|noun": {},
+  "Zustand|noun": {},
+  "ordentlich|adj": {},
+  "Bauer|noun": {},
+  "Prüfung|noun": {},
+  "Standort|noun": {},
+  "Erde|noun": {},
+  "Forderung|noun": {},
+  "ewig|adj": {},
+  "Herbst|noun": {},
+  "außen|adv": {},
+  "Heimat|noun": {},
+  "innen|adv": {},
+  "Produktion|noun": {},
+  "anmelden|verb": {},
+  "Zuhause|noun": {},
+  "auftauchen|verb": {},
+  "Himmel|noun": {},
+  "lohnen|verb": {},
+  "ehemalig|adj": {},
+  "Ereignis|noun": {},
+  "Angabe|noun": {},
+  "Ei|noun": {},
+  "Recht|noun": {},
+  "britisch|adj": {},
+  "Fahrer|noun": {},
+  "zuständig|adj": {},
+  "italienisch|adj": {},
+  "eins|num": {},
+  "Ecke|noun": {},
+  "behalten|verb": {},
+  "falls|conj": {},
+  "Struktur|noun": {},
+  "Verlust|noun": {},
+  "Schloss|noun": {},
+  "Besucher|noun": {
+   "outside": [
+    "viele"
+   ]
+  },
+  "ungefähr|adj": {},
+  "Anwendung|noun": {},
+  "eindeutig|adj": {},
+  "süß|adj": {},
+  "Ohr|noun": {},
+  "herzlich|adj": {},
+  "überzeugen|verb": {},
+  "aufheben|verb": {},
+  "vollkommen|adj": {},
+  "extrem|adj": {},
+  "Mama|noun": {},
+  "stoßen|verb": {
+   "outside": [
+    "aufstoßen"
+   ]
+  },
+  "Gegend|noun": {
+   "outside": [
+    "viele"
+   ]
+  },
+  "freundlich|adj": {},
+  "Operation|noun": {},
+  "Aufnahme|noun": {},
+  "Detail|noun": {},
+  "regional|adj": {},
+  "Karriere|noun": {},
+  "Tradition|noun": {},
+  "aussprechen|verb": {},
+  "vorne|adv": {},
+  "wow|intj": {},
+  "Stil|noun": {},
+  "unmöglich|adj": {},
+  "Verkauf|noun": {},
+  "Computer|noun": {},
+  "studieren|verb": {},
+  "automatisch|adj": {
+   "outside": [
+    "aufgehen"
+   ]
+  },
+  "mitnehmen|verb": {},
+  "Journalist|noun": {},
+  "drohen|verb": {},
+  "Ton|noun": {},
+  "Rechnung|noun": {},
+  "Theorie|noun": {},
+  "golden|adj": {},
+  "Kino|noun": {},
+  "sechs|num": {},
+  "Wind|noun": {},
+  "Zeug|noun": {},
+  "Haar|noun": {},
+  "böse|adj": {},
+  "erwähnen|verb": {},
+  "springen|verb": {},
+  "erhöhen|verb": {},
+  "zentral|adj": {},
+  "anziehen|verb": {},
+  "Glas|noun": {},
+  "Mittwoch|noun": {},
+  "untersuchen|verb": {},
+  "blöd|adj": {},
+  "verändern|verb": {},
+  "Wolf|noun": {},
+  "Sekunde|noun": {},
+  "hauptsächlich|adj": {},
+  "Küche|noun": {},
+  "Reihe|noun": {},
+  "Arm|noun": {},
+  "selbstverständlich|adj": {},
+  "mehrfach|adj": {},
+  "erweitern|verb": {},
+  "demokratisch|adj": {},
+  "Ursache|noun": {},
+  "Radio|noun": {},
+  "mitbringen|verb": {},
+  "messen|verb": {},
+  "Gehalt|noun": {},
+  "möglicherweise|adv": {},
+  "westlich|adj": {},
+  "Rand|noun": {},
+  "herausfinden|verb": {},
+  "Ruhe|noun": {},
+  "kritisieren|verb": {},
+  "bemerken|verb": {},
+  "Sammlung|noun": {},
+  "Service|noun": {},
+  "weiblich|adj": {},
+  "Konflikt|noun": {},
+  "Maßnahme|noun": {},
+  "Meister|noun": {},
+  "Schrift|noun": {},
+  "individuell|adj": {},
+  "ausdrücken|verb": {},
+  "sinnvoll|adj": {},
+  "ablehnen|verb": {},
+  "verbringen|verb": {},
+  "vieles|pron": {},
+  "Medien|noun": {},
+  "heftig|adj": {},
+  "schießen|verb": {},
+  "Vortrag|noun": {},
+  "ausprobieren|verb": {},
+  "davor|adv": {},
+  "extra|adj": {},
+  "Gesundheit|noun": {},
+  "ha|intj": {},
+  "sicherlich|adv": {},
+  "Bühne|noun": {},
+  "zulassen|verb": {},
+  "Streit|noun": {},
+  "spüren|verb": {},
+  "betrachten|verb": {},
+  "Papier|noun": {
+   "outside": [
+    "Stift"
+   ]
+  },
+  "schmecken|verb": {},
+  "wunderschön|adj": {},
+  "Angriff|noun": {},
+  "Arbeitgeber|noun": {},
+  "aufhalten|verb": {},
+  "Flugzeug|noun": {},
+  "Ehe|noun": {},
+  "Fleisch|noun": {},
+  "schneiden|verb": {},
+  "seitdem|adv": {},
+  "sowieso|adv": {},
+  "verletzt|adj": {},
+  "Training|noun": {},
+  "zustimmen|verb": {},
+  "Holz|noun": {},
+  "zunehmen|verb": {},
+  "Smartphone|noun": {},
+  "männlich|adj": {},
+  "Spur|noun": {},
+  "Station|noun": {},
+  "Nase|noun": {},
+  "verursachen|verb": {
+   "outside": [
+    "viele"
+   ]
+  },
+  "geeignet|adj": {},
+  "Osten|noun": {
+   "outside": [
+    "Sonne",
+    "aufgehen"
+   ]
+  },
+  "Restaurant|noun": {},
+  "intensiv|adj": {},
+  "erlauben|verb": {},
+  "behandeln|verb": {},
+  "Tasche|noun": {},
+  "Anwalt|noun": {},
+  "Stimmung|noun": {},
+  "hallo|intj": {},
+  "Einstellung|noun": {},
+  "Kanal|noun": {},
+  "Hersteller|noun": {
+   "outside": [
+    "Garantie"
+   ]
+  },
+  "stolz|adj": {},
+  "ah|intj": {},
+  "mailen|verb": {},
+  "hübsch|adj": {},
+  "Flug|noun": {},
+  "sinken|verb": {},
+  "Alkohol|noun": {},
+  "löschen|verb": {},
+  "maximal|adj": {},
+  "Publikum|noun": {},
+  "Mord|noun": {},
+  "Abteilung|noun": {},
+  "heben|verb": {},
+  "beschäftigt|adj": {},
+  "Aussage|noun": {},
+  "alternativ|adj": {},
+  "schützen|verb": {},
+  "Ausnahme|noun": {},
+  "Pass|noun": {
+   "outside": [
+    "dabeihaben"
+   ]
+  },
+  "Ring|noun": {},
+  "Dienstag|noun": {},
+  "Phase|noun": {},
+  "leer|adj": {},
+  "Beschreibung|noun": {},
+  "Fähigkeit|noun": {},
+  "chinesisch|adj": {},
+  "Nutzen|noun": {},
+  "übertragen|verb": {},
+  "kaputt|adj": {},
+  "kulturell|adj": {},
+  "klären|verb": {},
+  "Nation|noun": {},
+  "Objekt|noun": {},
+  "Auflage|noun": {},
+  "warnen|verb": {},
+  "Aktie|noun": {},
+  "Hochschule|noun": {},
+  "dick|adj": {},
+  "Aufmerksamkeit|noun": {},
+  "billig|adj": {},
+  "zeichnen|verb": {},
+  "abholen|verb": {},
+  "Adresse|noun": {},
+  "Bundesregierung|noun": {},
+  "entlang|prep": {},
+  "meistens|adv": {},
+  "sodass|conj": {},
+  "woher|adv": {},
+  "durchschnittlich|adj": {},
+  "angenehm|adj": {},
+  "witzig|adj": {},
+  "sämtlich|adj": {},
+  "Motor|noun": {},
+  "ausüben|verb": {},
+  "verbieten|verb": {},
+  "stören|verb": {},
+  "ausmachen|verb": {},
+  "Bezirk|noun": {},
+  "twittern|verb": {},
+  "behaupten|verb": {},
+  "Förderung|noun": {},
+  "künftig|adj": {},
+  "Gewicht|noun": {},
+  "tätig|adj": {},
+  "Forum|noun": {},
+  "Geschlecht|noun": {},
+  "Liter|noun": {},
+  "aufpassen|verb": {},
+  "Schatz|noun": {},
+  "einführen|verb": {},
+  "probieren|verb": {},
+  "Umwelt|noun": {},
+  "zusammenfassen|verb": {},
+  "sonstig|adj": {},
+  "Eigenschaft|noun": {},
+  "momentan|adj": {},
+  "Maß|noun": {},
+  "Unterricht|noun": {},
+  "Anlass|noun": {},
+  "Einwohner|noun": {},
+  "Hose|noun": {},
+  "Schaden|noun": {},
+  "Umgang|noun": {},
+  "ausbauen|verb": {},
+  "Respekt|noun": {},
+  "Übersetzung|noun": {},
+  "verstärken|verb": {},
+  "Bundestag|noun": {},
+  "verletzen|verb": {},
+  "Demonstration|noun": {},
+  "dicht|adj": {},
+  "Realität|noun": {},
+  "Leser|noun": {
+   "outside": [
+    "viele"
+   ]
+  },
+  "willkommen|adj": {},
+  "Held|noun": {},
+  "ansonsten|adv": {},
+  "bislang|adv": {},
+  "beliebt|adj": {},
+  "investieren|verb": {},
+  "senden|verb": {},
+  "Hass|noun": {},
+  "Debatte|noun": {},
+  "Verständnis|noun": {},
+  "Rock|noun": {},
+  "Statistik|noun": {},
+  "fair|adj": {},
+  "bedeutend|adj": {},
+  "umgehen|verb": {},
+  "damalig|adj": {},
+  "vorschlagen|verb": {},
+  "Boot|noun": {},
+  "vornehmen|verb": {},
+  "Minister|noun": {},
+  "Auftritt|noun": {},
+  "andererseits|adv": {},
+  "bunt|adj": {},
+  "Ball|noun": {},
+  "Dokument|noun": {},
+  "Erkenntnis|noun": {},
+  "Amerikaner|noun": {},
+  "wiederholen|verb": {},
+  "Motiv|noun": {},
+  "Schuld|noun": {},
+  "ausbilden|verb": {},
+  "wenden|verb": {},
+  "Pflicht|noun": {},
+  "Nachmittag|noun": {},
+  "spanisch|adj": {},
+  "Argument|noun": {},
+  "passend|adj": {},
+  "mächtig|adj": {},
+  "vergleichen|verb": {},
+  "ausgezeichnet|adj": {},
+  "wundern|verb": {},
+  "fortsetzen|verb": {},
+  "nackt|adj": {},
+  "weshalb|adv": {},
+  "sichtbar|adj": {},
+  "Handlung|noun": {},
+  "sauber|adj": {},
+  "Zeitschrift|noun": {},
+  "sperren|verb": {},
+  "anpassen|verb": {},
+  "Aspekt|noun": {},
+  "Garten|noun": {},
+  "Bewohner|noun": {},
+  "Webseite|noun": {},
+  "Verhandlung|noun": {},
+  "trennen|verb": {},
+  "Instrument|noun": {},
+  "Republik|noun": {},
+  "Steuer|noun": {},
+  "Fluss|noun": {},
+  "ach|intj": {},
+  "kochen|verb": {},
+  "Nutzung|noun": {},
+  "still|adj": {},
+  "unbekannt|adj": {},
+  "Trend|noun": {},
+  "Flasche|noun": {},
+  "Reise|noun": {},
+  "Wand|noun": {},
+  "Design|noun": {},
+  "verzichten|verb": {},
+  "üben|verb": {},
+  "Dach|noun": {},
+  "Lager|noun": {},
+  "erzielen|verb": {},
+  "Keller|noun": {},
+  "leise|adj": {},
+  "Ansatz|noun": {},
+  "ernsthaft|adj": {},
+  "zufällig|adj": {},
+  "blau|adj": {},
+  "daneben|adv": {},
+  "desto|conj": {},
+  "stattdessen|adv": {},
+  "zweimal|adv": {},
+  "Musiker|noun": {},
+  "musikalisch|adj": {},
+  "Mission|noun": {},
+  "Aufbau|noun": {},
+  "Code|noun": {
+   "outside": [
+    "eingeben"
+   ]
+  },
+  "seltsam|adj": {},
+  "Verlauf|noun": {},
+  "Alternative|noun": {},
+  "Homepage|noun": {},
+  "Festival|noun": {},
+  "Fahrrad|noun": {},
+  "Faktor|noun": {},
+  "Kandidat|noun": {},
+  "trocken|adj": {},
+  "errichten|verb": {},
+  "Effekt|noun": {},
+  "Wähler|noun": {},
+  "Engel|noun": {},
+  "Vorbereitung|noun": {},
+  "endgültig|adj": {},
+  "vermitteln|verb": {
+   "outside": [
+    "Wissen"
+   ]
+  },
+  "schätzen|verb": {},
+  "römisch|adj": {
+   "outside": [
+    "Rom"
+   ]
+  },
+  "dunkel|adj": {},
+  "Gegenteil|noun": {},
+  "nachts|adv": {},
+  "Fahrt|noun": {},
+  "Aktivität|noun": {},
+  "gegenseitig|adj": {},
+  "Gymnasium|noun": {},
+  "Christ|noun": {},
+  "eventuell|adj": {},
+  "zunehmend|adj": {},
+  "verteidigen|verb": {},
+  "Turnier|noun": {},
+  "Wetter|noun": {},
+  "Krise|noun": {},
+  "schieben|verb": {},
+  "Schlag|noun": {},
+  "Bundesrepublik|noun": {
+   "later": [
+    "sechzehn"
+   ]
+  },
+  "verlaufen|verb": {},
+  "streng|adj": {},
+  "Philosophie|noun": {},
+  "Feuer|noun": {},
+  "Feind|noun": {},
+  "Falle|noun": {},
+  "anwenden|verb": {},
+  "erheben|verb": {},
+  "Schwierigkeit|noun": {},
+  "verbessern|verb": {},
+  "Niveau|noun": {},
+  "Planung|noun": {},
+  "Niederlage|noun": {},
+  "Profil|noun": {},
+  "ergänzen|verb": {},
+  "Manager|noun": {},
+  "einkaufen|verb": {},
+  "einziehen|verb": {},
+  "negativ|adj": {},
+  "militärisch|adj": {},
+  "nahezu|adv": {},
+  "global|adj": {},
+  "begrüßen|verb": {},
+  "nerven|verb": {},
+  "Kommunikation|noun": {},
+  "stärken|verb": {},
+  "Vogel|noun": {},
+  "Kombination|noun": {},
+  "brennen|verb": {},
+  "Strecke|noun": {},
+  "Event|noun": {},
+  "Hauptstadt|noun": {},
+  "Gas|noun": {},
+  "unterbringen|verb": {},
+  "Formel|noun": {},
+  "Haut|noun": {},
+  "Verletzung|noun": {},
+  "Gemeinschaft|noun": {},
+  "Stoff|noun": {},
+  "Schuss|noun": {},
+  "Initiative|noun": {},
+  "ausreichend|adj": {
+   "outside": [
+    "dabeihaben"
+   ]
+  },
+  "runter|adv": {
+   "outside": [
+    "runterkommen"
+   ]
+  },
+  "Auswirkung|noun": {},
+  "laufend|adj": {
+   "outside": [
+    "Kosten"
+   ]
+  },
+  "Protest|noun": {},
+  "körperlich|adj": {},
+  "geistig|adj": {
+   "outside": [
+    "Lernen"
+   ]
+  },
+  "garantieren|verb": {},
+  "Schlaf|noun": {},
+  "berücksichtigen|verb": {},
+  "demnach|adv": {},
+  "jemals|adv": {},
+  "Software|noun": {},
+  "Revolution|noun": {
+   "outside": [
+    "vielen"
+   ]
+  },
+  "beruflich|adj": {},
+  "Feier|noun": {},
+  "schade|adj": {},
+  "beschließen|verb": {},
+  "finanzieren|verb": {},
+  "japanisch|adj": {},
+  "Schicksal|noun": {},
+  "bedienen|verb": {},
+  "Landschaft|noun": {},
+  "eingreifen|verb": {},
+  "beteiligen|verb": {},
+  "weinen|verb": {},
+  "Schmerz|noun": {},
+  "ausreichen|verb": {},
+  "lächeln|verb": {},
+  "Magazin|noun": {},
+  "Shop|noun": {},
+  "Geschmack|noun": {},
+  "hassen|verb": {},
+  "Sender|noun": {},
+  "Blog|noun": {},
+  "wertvoll|adj": {},
+  "anhören|verb": {},
+  "aufmerksam|adj": {
+   "outside": [
+    "zuhören"
+   ]
+  },
+  "schenken|verb": {},
+  "Prinz|noun": {},
+  "Botschaft|noun": {},
+  "Zeitraum|noun": {},
+  "festnehmen|verb": {},
+  "erlaubt|adj": {},
+  "Perspektive|noun": {},
+  "posten|verb": {},
+  "Archiv|noun": {
+   "outside": [
+    "viele"
+   ]
+  },
+  "ausführen|verb": {},
+  "Blatt|noun": {},
+  "stehlen|verb": {},
+  "fließen|verb": {},
+  "kündigen|verb": {},
+  "Kern|noun": {},
+  "hi|intj": {},
+  "Medizin|noun": {},
+  "Kreuz|noun": {},
+  "Konsequenz|noun": {},
+  "Strategie|noun": {},
+  "scheitern|verb": {},
+  "ausführlich|adj": {},
+  "real|adj": {},
+  "umfangreich|adj": {},
+  "tanzen|verb": {},
+  "Gegenstand|noun": {},
+  "Profi|noun": {},
+  "Teilnahme|noun": {},
+  "Konto|noun": {},
+  "überprüfen|verb": {},
+  "pflegen|verb": {},
+  "Alltag|noun": {},
+  "Mut|noun": {},
+  "abhalten|verb": {},
+  "abhängig|adj": {},
+  "Kenntnis|noun": {},
+  "freiwillig|adj": {},
+  "Stellung|noun": {},
+  "belegen|verb": {},
+  "Blume|noun": {},
+  "definitiv|adv": {},
+  "Pause|noun": {},
+  "Unternehmer|noun": {},
+  "testen|verb": {},
+  "krass|adj": {},
+  "Spiegel|noun": {},
+  "spätestens|adv": {},
+  "tja|intj": {},
+  "verfügbar|adj": {},
+  "erstellen|verb": {},
+  "Bundesland|noun": {},
+  "ausländisch|adj": {},
+  "Wechsel|noun": {},
+  "lehren|verb": {},
+  "Absicht|noun": {},
+  "lokal|adj": {},
+  "Arbeiter|noun": {},
+  "Verbot|noun": {},
+  "vergeben|verb": {},
+  "Kleid|noun": {},
+  "Geschwindigkeit|noun": {},
+  "Story|noun": {},
+  "Brand|noun": {},
+  "fern|adj": {},
+  "meistern|verb": {},
+  "klicken|verb": {},
+  "Umfrage|noun": {},
+  "anstellen|verb": {},
+  "einbauen|verb": {},
+  "sicherstellen|verb": {},
+  "Bezeichnung|noun": {},
+  "Besitzer|noun": {},
+  "Rose|noun": {},
+  "Integration|noun": {},
+  "womit|adv": {},
+  "Kerl|noun": {},
+  "vermeiden|verb": {},
+  "Studio|noun": {},
+  "zurückziehen|verb": {
+   "outside": [
+    "Antrag"
+   ]
+  },
+  "Klinik|noun": {},
+  "Überraschung|noun": {},
+  "empfinden|verb": {},
+  "abstimmen|verb": {},
+  "träumen|verb": {},
+  "Hochzeit|noun": {},
+  "langweilig|adj": {},
+  "Oma|noun": {},
+  "gestalten|verb": {},
+  "Herausforderung|noun": {},
+  "fünfte|num": {},
+  "müde|adj": {},
+  "Gefängnis|noun": {},
+  "aufwachsen|verb": {},
+  "Option|noun": {},
+  "Geburt|noun": {},
+  "Brot|noun": {},
+  "Augenblick|noun": {},
+  "korrekt|adj": {},
+  "festlegen|verb": {},
+  "Vorbild|noun": {},
+  "Feuerwehr|noun": {},
+  "Verband|noun": {
+   "outside": [
+    "anlegen"
+   ]
+  },
+  "gerecht|adj": {},
+  "Paket|noun": {},
+  "Stadion|noun": {},
+  "Format|noun": {},
+  "sportlich|adj": {},
+  "Plattform|noun": {},
+  "verbreiten|verb": {},
+  "widmen|verb": {},
+  "lügen|verb": {},
+  "reißen|verb": {},
+  "gelangen|verb": {},
+  "Paar|noun": {},
+  "Loch|noun": {},
+  "Grundstück|noun": {},
+  "genügen|verb": {},
+  "bedenken|verb": {
+   "outside": [
+    "Kosten"
+   ]
+  },
+  "bewerten|verb": {},
+  "weitgehend|adv": {},
+  "Rad|noun": {},
+  "einsteigen|verb": {
+   "outside": [
+    "losfahren"
+   ]
+  },
+  "gratis|adv": {},
+  "letztlich|adv": {},
+  "ohnehin|adv": {},
+  "worauf|adv": {},
+  "zumal|conj": {},
+  "ungewöhnlich|adj": {},
+  "packen|verb": {},
+  "Haltung|noun": {},
+  "hinterlassen|verb": {},
+  "aufwachen|verb": {},
+  "überraschen|verb": {},
+  "Messer|noun": {},
+  "Verbesserung|noun": {},
+  "längst|adv": {},
+  "Runde|noun": {},
+  "umfassend|adj": {},
+  "getrennt|adv": {},
+  "enorm|adj": {},
+  "beteiligt|adj": {},
+  "Eis|noun": {},
+  "berühren|verb": {},
+  "profitieren|verb": {},
+  "Gedicht|noun": {},
+  "Dauer|noun": {},
+  "ignorieren|verb": {},
+  "Ebene|noun": {},
+  "Versicherung|noun": {},
+  "entschuldigen|verb": {},
+  "Schauspieler|noun": {},
+  "empfangen|verb": {},
+  "stoppen|verb": {},
+  "Arbeitsplatz|noun": {},
+  "Schwerpunkt|noun": {},
+  "Zitat|noun": {},
+  "stürzen|verb": {},
+  "Gewissen|noun": {},
+  "Sitzung|noun": {},
+  "räumen|verb": {},
+  "Koch|noun": {},
+  "Geheimnis|noun": {},
+  "Nachfolger|noun": {},
+  "Account|noun": {},
+  "geschickt|adj": {},
+  "zukünftig|adj": {},
+  "einhalten|verb": {},
+  "Achtung|intj": {},
+  "anstatt|conj": {},
+  "daraufhin|adv": {},
+  "Silber|noun": {},
+  "Status|noun": {},
+  "Bibliothek|noun": {},
+  "Haushalt|noun": {},
+  "Anbieter|noun": {},
+  "doppelt|adj": {},
+  "Frühstück|noun": {},
+  "zugeben|verb": {},
+  "wild|adj": {},
+  "arabisch|adj": {},
+  "Gelände|noun": {},
+  "produzieren|verb": {},
+  "Hamburger|noun": {
+   "outside": [
+    "Pommes"
+   ]
+  },
+  "Finger|noun": {
+   "outside": [
+    "weh"
+   ]
+  },
+  "absetzen|verb": {},
+  "Freundschaft|noun": {},
+  "scheinbar|adv": {},
+  "dringend|adj": {},
+  "raten|verb": {},
+  "Tabelle|noun": {},
+  "Rezept|noun": {},
+  "vorsichtig|adj": {},
+  "Zahn|noun": {
+   "outside": [
+    "weh"
+   ]
+  },
+  "Server|noun": {},
+  "aufregen|verb": {},
+  "Gehirn|noun": {},
+  "attraktiv|adj": {},
+  "schreien|verb": {},
+  "dünn|adj": {},
+  "Milch|noun": {},
+  "normalerweise|adv": {},
+  "via|prep": {},
+  "Zustimmung|noun": {},
+  "Sieger|noun": {},
+  "Direktor|noun": {},
+  "Fach|noun": {},
+  "beantworten|verb": {},
+  "südlich|adj": {},
+  "langfristig|adj": {},
+  "erwerben|verb": {},
+  "schuld|adj": {},
+  "Übersicht|noun": {},
+  "Umfeld|noun": {},
+  "wach|adj": {},
+  "stabil|adj": {},
+  "aussuchen|verb": {},
+  "Wissenschaftler|noun": {},
+  "bemühen|verb": {},
+  "parallel|adj": {},
+  "original|adj": {},
+  "nachfragen|verb": {},
+  "Symbol|noun": {},
+  "Schatten|noun": {},
+  "zitieren|verb": {},
+  "Esslöffel|noun": {},
+  "lächerlich|adj": {},
+  "Zufall|noun": {},
+  "Engagement|noun": {},
+  "gebrauchen|verb": {},
+  "erwischen|verb": {},
+  "Handel|noun": {},
+  "Seminar|noun": {},
+  "vernünftig|adj": {},
+  "Infrastruktur|noun": {},
+  "Quelle|noun": {
+   "outside": [
+    "unklar"
+   ]
+  },
+  "hierzu|adv": {},
+  "vielmehr|adv": {},
+  "wohin|adv": {},
+  "Shirt|noun": {},
+  "Mist|noun": {},
+  "Weihnachten|noun": {},
+  "fremd|adj": {},
+  "unterhalten|verb": {},
+  "begegnen|verb": {},
+  "Wille|noun": {},
+  "schweigen|verb": {},
+  "polnisch|adj": {},
+  "Brust|noun": {},
+  "konzentrieren|verb": {},
+  "vermissen|verb": {},
+  "städtisch|adj": {},
+  "weitergehen|verb": {},
+  "berühmt|adj": {},
+  "Spannung|noun": {},
+  "kontrollieren|verb": {},
+  "gelb|adj": {
+   "outside": [
+    "Sonne"
+   ]
+  },
+  "ausdrücklich|adj": {},
+  "klug|adj": {},
+  "Humor|noun": {},
+  "Tonne|noun": {},
+  "schrecklich|adj": {},
+  "tauchen|verb": {},
+  "Signal|noun": {},
+  "spenden|verb": {},
+  "psychisch|adj": {},
+  "Therapie|noun": {},
+  "reduzieren|verb": {},
+  "theoretisch|adj": {},
+  "Sturm|noun": {},
+  "Rückkehr|noun": {},
+  "sofern|conj": {},
+  "soviel|conj": {},
+  "Begründung|noun": {},
+  "flach|adj": {},
+  "beibringen|verb": {},
+  "Strand|noun": {},
+  "schick|adj": {},
+  "generell|adj": {},
+  "Zweifel|noun": {},
+  "Institution|noun": {},
+  "verteilen|verb": {},
+  "Papa|noun": {},
+  "akzeptieren|verb": {},
+  "Marketing|noun": {},
+  "Branche|noun": {},
+  "Management|noun": {},
+  "Fisch|noun": {},
+  "einfallen|verb": {},
+  "zweifeln|verb": {},
+  "verraten|verb": {},
+  "lehnen|verb": {},
+  "nördlich|adj": {},
+  "trainieren|verb": {},
+  "Kapitel|noun": {},
+  "Kuchen|noun": {},
+  "Königin|noun": {},
+  "Finale|noun": {},
+  "Kloster|noun": {},
+  "vermuten|verb": {},
+  "Bedarf|noun": {},
+  "friedlich|adj": {},
+  "spontan|adj": {},
+  "Experte|noun": {},
+  "Absatz|noun": {},
+  "herrlich|adj": {},
+  "Bekannter|noun": {},
+  "pflanzen|verb": {},
+  "Stress|noun": {},
+  "Ticket|noun": {},
+  "peinlich|adj": {},
+  "anhand|prep": {},
+  "einerseits|adv": {},
+  "Herkunft|noun": {},
+  "quasi|adv": {},
+  "künstlerisch|adj": {},
+  "hell|adj": {},
+  "dauerhaft|adj": {},
+  "Rente|noun": {},
+  "fort|adv": {},
+  "miteinander|adv": {},
+  "kommend|adj": {},
+  "Presse|noun": {},
+  "Glückwunsch|noun": {},
+  "decken|verb": {},
+  "Eigentum|noun": {},
+  "illegal|adj": {},
+  "Anforderung|noun": {},
+  "beachten|verb": {},
+  "Frühjahr|noun": {},
+  "Meldung|noun": {},
+  "Medikament|noun": {},
+  "streichen|verb": {},
+  "verlängern|verb": {},
+  "Entwurf|noun": {},
+  "Lebensmittel|noun": {},
+  "Mangel|noun": {},
+  "Tee|noun": {},
+  "Aussicht|noun": {},
+  "Bescheid|noun": {},
+  "inklusive|prep": {},
+  "vorhaben|verb": {},
+  "heiraten|verb": {},
+  "hinein|adv": {
+   "outside": [
+    "hineinkommen"
+   ]
+  },
+  "Eingang|noun": {},
+  "massiv|adj": {},
+  "Lkw|noun": {},
+  "Bewertung|noun": {},
+  "locker|adj": {},
+  "erstaunlich|adj": {},
+  "abends|adv": {},
+  "Öl|noun": {},
+  "Drittel|noun": {},
+  "künstlich|adj": {},
+  "grob|adj": {},
+  "nähern|verb": {},
+  "ablegen|verb": {},
+  "Identität|noun": {},
+  "nachhaltig|adj": {},
+  "Stuhl|noun": {},
+  "Abstand|noun": {},
+  "Spruch|noun": {},
+  "abschaffen|verb": {},
+  "Empfehlung|noun": {},
+  "dankbar|adj": {},
+  "unterschreiben|verb": {},
+  "heilig|adj": {
+   "outside": [
+    "viele"
+   ]
+  },
+  "Bedürfnis|noun": {},
+  "Technologie|noun": {},
+  "einleiten|verb": {},
+  "rasch|adj": {},
+  "buchen|verb": {
+   "outside": [
+    "Rom"
+   ]
+  },
+  "klagen|verb": {},
+  "Hals|noun": {
+   "outside": [
+    "weh"
+   ]
+  },
+  "Betrag|noun": {},
+  "Störung|noun": {},
+  "kreativ|adj": {},
+  "eignen|verb": {},
+  "Vorwurf|noun": {},
+  "keinerlei|det": {},
+  "Kleidung|noun": {},
+  "Menschheit|noun": {
+   "outside": [
+    "viele"
+   ]
+  },
+  "achten|verb": {},
+  "Talent|noun": {},
+  "Widerstand|noun": {},
+  "Übung|noun": {},
+  "riechen|verb": {},
+  "Anzeige|noun": {},
+  "Angelegenheit|noun": {},
+  "Chat|noun": {},
+  "Krone|noun": {},
+  "Hölle|noun": {},
+  "Abenteuer|noun": {},
+  "Parkplatz|noun": {},
+  "Pilot|noun": {},
+  "Mond|noun": {},
+  "Schnee|noun": {},
+  "auflösen|verb": {},
+  "Definition|noun": {},
+  "Wachstum|noun": {},
+  "hm|intj": {},
+  "Ehre|noun": {},
+  "trauen|verb": {},
+  "angemessen|adj": {},
+  "Neubau|noun": {},
+  "Franzose|noun": {},
+  "Halle|noun": {},
+  "schriftlich|adj": {},
+  "Tanz|noun": {},
+  "Anruf|noun": {},
+  "beinahe|adv": {},
+  "Schönheit|noun": {},
+  "emotional|adj": {},
+  "dahinter|adv": {},
+  "Landwirtschaft|noun": {},
+  "umso|conj": {},
+  "Großteil|noun": {},
+  "Hafen|noun": {},
+  "Militär|noun": {},
+  "namens|adv": {},
+  "Tiefe|noun": {},
+  "mitten|adv": {},
+  "formulieren|verb": {},
+  "hervorragend|adj": {},
+  "Unterhaltung|noun": {},
+  "Sänger|noun": {},
+  "ausziehen|verb": {},
+  "ausrichten|verb": {},
+  "Kredit|noun": {},
+  "abziehen|verb": {},
+  "Burg|noun": {},
+  "Provinz|noun": {},
+  "Motto|noun": {},
+  "überrascht|adj": {},
+  "Länge|noun": {},
+  "ausfallen|verb": {},
+  "Planet|noun": {},
+  "Westen|noun": {
+   "outside": [
+    "Sonne",
+    "untergehen"
+   ]
+  },
+  "schwimmen|verb": {},
+  "Wesen|noun": {},
+  "Beratung|noun": {},
+  "Breite|noun": {},
+  "hinzufügen|verb": {},
+  "braun|adj": {},
+  "Chor|noun": {},
+  "versorgen|verb": {},
+  "glatt|adj": {},
+  "Einladung|noun": {},
+  "plus|adv": {},
+  "gewöhnlich|adj": {},
+  "einschalten|verb": {},
+  "Erlebnis|noun": {},
+  "fürchten|verb": {},
+  "übergeben|verb": {},
+  "Dialog|noun": {},
+  "Hut|noun": {},
+  "fressen|verb": {},
+  "verwandeln|verb": {},
+  "verfügen|verb": {},
+  "Persönlichkeit|noun": {},
+  "bearbeiten|verb": {},
+  "lecker|adj": {},
+  "Schwein|noun": {},
+  "Rathaus|noun": {},
+  "Miete|noun": {},
+  "waschen|verb": {},
+  "Laden|noun": {},
+  "bar|adj": {},
+  "Heft|noun": {},
+  "Cent|noun": {},
+  "Kasse|noun": {},
+  "Bauch|noun": {
+   "outside": [
+    "weh"
+   ]
+  },
+  "acht|num": {},
+  "Getränk|noun": {},
+  "Fernseher|noun": {},
+  "Salz|noun": {},
+  "Entschuldigung|noun": {},
+  "Apfel|noun": {},
+  "Pizza|noun": {},
+  "Gemüse|noun": {},
+  "Lehrerin|noun": {},
+  "Onkel|noun": {},
+  "Treppe|noun": {},
+  "zwölf|num": {},
+  "Kuh|noun": {},
+  "Brille|noun": {},
+  "Jacke|noun": {},
+  "Supermarkt|noun": {},
+  "Toilette|noun": {},
+  "Schokolade|noun": {},
+  "Maus|noun": {},
+  "grau|adj": {},
+  "Frühling|noun": {},
+  "Kartoffel|noun": {},
+  "Käse|noun": {},
+  "Taxi|noun": {},
+  "Schülerin|noun": {},
+  "Wolke|noun": {},
+  "Feiertag|noun": {},
+  "Notfall|noun": {},
+  "Opa|noun": {
+   "later": [
+    "achtzig"
+   ]
+  },
+  "Akku|noun": {},
+  "Viertel|noun": {},
+  "Kühlschrank|noun": {},
+  "Balkon|noun": {},
+  "Ankunft|noun": {},
+  "Zucker|noun": {},
+  "Ausflug|noun": {},
+  "abfahren|verb": {
+   "outside": [
+    "neun"
+   ]
+  },
+  "Koffer|noun": {},
+  "Schrank|noun": {},
+  "Schlüssel|noun": {},
+  "Rücken|noun": {
+   "outside": [
+    "weh"
+   ]
+  },
+  "nass|adj": {},
+  "Apotheke|noun": {},
+  "Tante|noun": {},
+  "Führerschein|noun": {},
+  "Schulter|noun": {
+   "outside": [
+    "weh"
+   ]
+  },
+  "Tasse|noun": {},
+  "Wohnzimmer|noun": {},
+  "Teppich|noun": {},
+  "Pilz|noun": {},
+  "Schlafzimmer|noun": {},
+  "satt|adj": {},
+  "Kalender|noun": {},
+  "Knie|noun": {
+   "outside": [
+    "weh"
+   ]
+  },
+  "Verkäufer|noun": {},
+  "Sofa|noun": {},
+  "Ofen|noun": {},
+  "Decke|noun": {},
+  "Topf|noun": {},
+  "Passwort|noun": {
+   "outside": [
+    "WLAN"
+   ]
+  },
+  "Großvater|noun": {},
+  "Hemd|noun": {},
+  "regnen|verb": {},
+  "Salat|noun": {},
+  "reparieren|verb": {},
+  "Gleis|noun": {},
+  "Socke|noun": {},
+  "aufräumen|verb": {},
+  "Dusche|noun": {},
+  "Haltestelle|noun": {
+   "outside": [
+    "drüben"
+   ]
+  },
+  "Verspätung|noun": {},
+  "Regal|noun": {},
+  "Enkel|noun": {},
+  "schmutzig|adj": {},
+  "Teller|noun": {},
+  "backen|verb": {},
+  "Bargeld|noun": {
+   "outside": [
+    "dabeihaben"
+   ]
+  },
+  "Lampe|noun": {
+   "outside": [
+    "anmachen"
+   ]
+  },
+  "Mitternacht|noun": {},
+  "Mantel|noun": {},
+  "Vormittag|noun": {},
+  "Rucksack|noun": {},
+  "Ampel|noun": {},
+  "Kreuzung|noun": {},
+  "Kreditkarte|noun": {},
+  "Saft|noun": {},
+  "Gepäck|noun": {},
+  "Ostern|noun": {},
+  "Ausweis|noun": {
+   "outside": [
+    "dabeihaben"
+   ]
+  },
+  "klingeln|verb": {},
+  "hundert|num": {},
+  "Honig|noun": {},
+  "Tomate|noun": {},
+  "Heizung|noun": {},
+  "Banane|noun": {},
+  "Orange|noun": {},
+  "Keks|noun": {},
+  "Straßenbahn|noun": {},
+  "Tankstelle|noun": {},
+  "umsteigen|verb": {},
+  "elf|num": {},
+  "Silvester|noun": {},
+  "Zahnarzt|noun": {},
+  "putzen|verb": {},
+  "Brötchen|noun": {},
+  "Obst|noun": {},
+  "Herd|noun": {},
+  "Großmutter|noun": {},
+  "aufladen|verb": {},
+  "sonnig|adj": {},
+  "Wörterbuch|noun": {},
+  "Kissen|noun": {
+   "outside": [
+    "weich"
+   ]
+  },
+  "tschüss|intj": {},
+  "Nebel|noun": {},
+  "Mütze|noun": {},
+  "Cousin|noun": {},
+  "Handschuh|noun": {},
+  "Vorhang|noun": {
+   "outside": [
+    "zumachen"
+   ]
+  },
+  "Wurst|noun": {},
+  "Ärztin|noun": {},
+  "hungrig|adj": {},
+  "Pullover|noun": {},
+  "Studentin|noun": {},
+  "Handtuch|noun": {},
+  "Abfahrt|noun": {},
+  "Suppe|noun": {},
+  "Abendessen|noun": {},
+  "Mittagessen|noun": {},
+  "rosa|adj": {},
+  "Badezimmer|noun": {},
+  "Fieber|noun": {},
+  "Kellner|noun": {},
+  "Bäckerei|noun": {},
+  "Pfanne|noun": {},
+  "zwanzig|num": {},
+  "Birne|noun": {},
+  "orange|adj": {},
+  "Waschmaschine|noun": {},
+  "Nachbarin|noun": {},
+  "Cousine|noun": {},
+  "Schal|noun": {},
+  "spülen|verb": {},
+  "Kopfschmerzen|noun": {},
+  "Sessel|noun": {},
+  "Seife|noun": {},
+  "Zwiebel|noun": {},
+  "Stiefel|noun": {},
+  "Traube|noun": {},
+  "Bahnsteig|noun": {},
+  "Zitrone|noun": {},
+  "Wecker|noun": {},
+  "Erkältung|noun": {},
+  "Schinken|noun": {},
+  "frühstücken|verb": {},
+  "Erdbeere|noun": {},
+  "Tablette|noun": {},
+  "Gewitter|noun": {},
+  "Joghurt|noun": {},
+  "Hausaufgabe|noun": {},
+  "Briefmarke|noun": {},
+  "Nudel|noun": {},
+  "Butter|noun": {},
+  "Trinkgeld|noun": {},
+  "Fahrkarte|noun": {},
+  "Marmelade|noun": {},
+  "schneien|verb": {},
+  "Löffel|noun": {},
+  "Pfeffer|noun": {},
+  "Bleistift|noun": {},
+  "geradeaus|adv": {},
+  "Gurke|noun": {},
+  "Karotte|noun": {},
+  "dreißig|num": {},
+  "Verkäuferin|noun": {},
+  "Zahnbürste|noun": {},
+  "Quittung|noun": {},
+  "Müsli|noun": {},
+  "Geldbörse|noun": {},
+  "Krankenwagen|noun": {},
+  "Reisepass|noun": {},
+  "lila|adj": {},
+  "Gabel|noun": {},
+  "Speisekarte|noun": {},
+  "vierzehn|num": {},
+  "Husten|noun": {},
+  "Hähnchen|noun": {},
+  "fünfzehn|num": {},
+  "Geldautomat|noun": {},
+  "fünfzig|num": {},
+  "Regenschirm|noun": {},
+  "vierzig|num": {},
+  "Stadtplan|noun": {},
+  "dreizehn|num": {},
+  "durstig|adj": {},
+  "Metzgerei|noun": {},
+  "sechzehn|num": {},
+  "sechzig|num": {},
+  "Ladekabel|noun": {},
+  "Kuli|noun": {},
+  "achtzehn|num": {},
+  "neunzig|num": {},
+  "Wechselgeld|noun": {},
+  "siebzehn|num": {},
+  "siebzig|num": {},
+  "Schnupfen|noun": {},
+  "achtzig|num": {},
+  "neunzehn|num": {}
+ }
+}

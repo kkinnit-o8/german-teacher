@@ -1,5 +1,5 @@
 /**
- * npm run build:words  [-- --step candidates|enrich|examples|assemble] [--limit 2700] [--max-words 2400]
+ * npm run build:words  [-- --step candidates|enrich|examples|assemble] [--limit 3000] [--max-words 2400]
  *
  * Builds the word bank data/words.json. Resumable: every LLM result is cached
  * in data/build/enrich/*.jsonl, so an interrupted run continues where it stopped.
@@ -29,6 +29,7 @@ import { buildCandidates, isJunkCandidate, type Candidate } from "./lib/candidat
 import { ENRICH_SCHEMA, ENRICH_SYSTEM, type EnrichItem } from "./lib/enrich-prompt";
 import { loadWordfreq } from "./lib/wordfreq";
 import { loadEnvLocal } from "./lib/env";
+import { checkExample, lookupFor } from "./lib/validate";
 
 const ROOT = path.resolve(__dirname, "..");
 const BUILD = path.join(ROOT, "data", "build");
@@ -36,7 +37,7 @@ const ENRICH_DIR = path.join(BUILD, "enrich");
 const CANDIDATES_FILE = path.join(BUILD, "candidates.json");
 const IDS_FILE = path.join(BUILD, "ids.json");
 const OVERRIDES_FILE = path.join(BUILD, "overrides.json");
-const EXAMPLES_REPORT = path.join(BUILD, "examples-report.json");
+const EXAMPLE_FIXES = path.join(BUILD, "examples-fixes.jsonl");
 const WORDS_FILE = path.join(ROOT, "data", "words.json");
 
 const args = process.argv.slice(2);
@@ -45,7 +46,7 @@ const argVal = (name: string, def: string) => {
   return i >= 0 && args[i + 1] ? args[i + 1] : def;
 };
 const STEP = argVal("--step", "all");
-const LIMIT = Number(argVal("--limit", "2700"));
+const LIMIT = Number(argVal("--limit", "3000"));
 const MAX_WORDS = Number(argVal("--max-words", "2400"));
 const MODEL = argVal("--model", process.env.WORDS_MODEL ?? "anthropic/claude-haiku-5.5");
 const BATCH = 25;
@@ -66,6 +67,8 @@ export interface CompactCandidate {
   score: number;
   share: number;
   dictIds: number[];
+  /** from data/build/supplement.txt: everyday words added even if rarer */
+  supplement?: boolean;
 }
 
 function compact(c: Candidate, totalFreq: number): CompactCandidate {
@@ -97,11 +100,34 @@ function stepCandidates(): CompactCandidate[] {
   for (const [w, f] of freq) if (/^[a-zäöüß]+$/.test(w)) total += f;
   const all = buildCandidates(entries, freq).filter((c) => !isJunkCandidate(c));
   all.forEach((c, i) => (c.rank = i + 1));
-  const list = all.slice(0, Math.max(LIMIT, 3000)).map((c) => compact(c, total));
+  const cut = Math.max(LIMIT, 3000);
+  const supplement = readSupplement();
+  const list = all
+    .filter((c) => c.rank <= cut || supplement.has(c.lemma))
+    .map((c) => {
+      const cc = compact(c, total);
+      if (supplement.has(c.lemma)) cc.supplement = true;
+      return cc;
+    });
+  const found = new Set(list.filter((c) => c.supplement).map((c) => c.lemma));
+  const notFound = [...supplement].filter((l) => !found.has(l));
+  if (notFound.length) console.log(`  supplement words not in the dictionary: ${notFound.join(", ")}`);
   fs.mkdirSync(BUILD, { recursive: true });
   fs.writeFileSync(CANDIDATES_FILE, "[\n" + list.map((c) => JSON.stringify(c)).join(",\n") + "\n]\n");
   console.log(`  wrote ${list.length} candidates to ${path.relative(ROOT, CANDIDATES_FILE)}`);
   return list;
+}
+
+function readSupplement(): Set<string> {
+  const file = path.join(BUILD, "supplement.txt");
+  if (!fs.existsSync(file)) return new Set();
+  return new Set(
+    fs
+      .readFileSync(file, "utf8")
+      .split(/\r?\n/)
+      .map((l) => l.trim())
+      .filter((l) => l && !l.startsWith("#")),
+  );
 }
 
 function readCandidates(): CompactCandidate[] {
@@ -152,7 +178,7 @@ function earlierWords(cands: CompactCandidate[], uptoRank: number): string {
 async function stepEnrich(cands: CompactCandidate[]) {
   console.log("Step 2: enrich (LLM review, meanings, CEFR, topic, example sentences)");
   const cache = readEnrichCache();
-  const todo = cands.filter((c) => c.rank <= LIMIT && !cache.has(c.key));
+  const todo = cands.filter((c) => (c.rank <= LIMIT || c.supplement) && !cache.has(c.key));
   console.log(`  ${cache.size} cached, ${todo.length} to do`);
   if (!todo.length) return;
   if (!getApiKey()) {
@@ -218,6 +244,27 @@ async function stepEnrich(cands: CompactCandidate[]) {
   }
 }
 
+export interface ExampleFix {
+  key: string;
+  de: string;
+  en: string;
+  source?: string;
+}
+
+/** Regenerated example sentences (data/build/examples-fixes.jsonl), last one per word wins. */
+export function readExampleFixes(): Map<string, ExampleFix> {
+  const map = new Map<string, ExampleFix>();
+  if (!fs.existsSync(EXAMPLE_FIXES)) return map;
+  for (const line of fs.readFileSync(EXAMPLE_FIXES, "utf8").split("\n")) {
+    if (!line.trim()) continue;
+    try {
+      const f = JSON.parse(line) as ExampleFix;
+      if (f.key && f.de) map.set(f.key, f);
+    } catch {}
+  }
+  return map;
+}
+
 interface Overrides {
   drop?: string[];
   items?: Record<string, Partial<EnrichItem>>;
@@ -247,16 +294,13 @@ export function stepAssemble(cands: CompactCandidate[]) {
   const dropSet = new Set(overrides.drop ?? []);
   const ids: Record<string, number> = fs.existsSync(IDS_FILE) ? JSON.parse(fs.readFileSync(IDS_FILE, "utf8")) : {};
   let nextId = Math.max(0, ...Object.values(ids)) + 1;
-  const report: Record<string, { flagged?: boolean; later?: string[]; de?: string; en?: string }> = fs.existsSync(
-    EXAMPLES_REPORT,
-  )
-    ? JSON.parse(fs.readFileSync(EXAMPLES_REPORT, "utf8")).items ?? {}
-    : {};
+  const fixes = readExampleFixes();
 
-  const words: Word[] = [];
+  let words: Word[] = [];
   const seen = new Set<string>();
+  const supplementKeys = new Set<string>();
   for (const c of cands) {
-    if (words.length >= MAX_WORDS) break;
+    if (c.rank > LIMIT && !c.supplement) continue;
     let item = cache.get(c.key);
     if (!item) continue;
     if (overrides.items?.[c.key]) item = { ...item, ...overrides.items[c.key] } as EnrichItem;
@@ -271,7 +315,7 @@ export function stepAssemble(cands: CompactCandidate[]) {
     const group = byLemma.get(lemma) ?? c.dictIds.map((id) => byId.get(id)!).filter(Boolean);
     const main = group.find((e) => e.p === pos) ?? group[0];
     const topic = (TOPICS as readonly string[]).includes(item.topic) ? (item.topic as Topic) : "abstract";
-    const ex = report[key] ?? report[c.key];
+    const ex = fixes.get(key);
     const w: Word = {
       id: (ids[key] ??= nextId++),
       key,
@@ -288,8 +332,6 @@ export function stepAssemble(cands: CompactCandidate[]) {
     const exDe = ex?.de ?? item.example.de;
     const exEn = ex?.en ?? item.example.en;
     w.example = { de: exDe.trim(), en: exEn.trim() };
-    if (ex?.flagged) w.example.flagged = true;
-    if (ex?.later?.length) w.example.later = ex.later;
     if (fam) w.forms = fam.forms;
     w.dictIds = group.map((e) => e.id);
 
@@ -327,8 +369,38 @@ export function stepAssemble(cands: CompactCandidate[]) {
       if (main.adj.cmp?.[0]) w.adj.comparative = main.adj.cmp[0];
       if (main.adj.sup?.[0]) w.adj.superlative = "am " + main.adj.sup[0];
     }
+    if (c.supplement) supplementKeys.add(key);
     words.push(w);
   }
+  // keep every supplement word; trim the rarest frequency-ranked words to MAX_WORDS
+  if (words.length > MAX_WORDS) {
+    let excess = words.length - MAX_WORDS;
+    const keep = new Array(words.length).fill(true);
+    for (let i = words.length - 1; i >= 0 && excess > 0; i--) {
+      if (!supplementKeys.has(words[i].key)) {
+        keep[i] = false;
+        excess--;
+      }
+    }
+    words = words.filter((_, i) => keep[i]);
+  }
+  words.forEach((w, i) => (w.rank = i + 1));
+
+  // validate every example with the app's own lemmatizer: flag a missing target or later-ranked words
+  const lookup = lookupFor(words);
+  let flagged = 0;
+  for (const w of words) {
+    if (!w.example) continue;
+    const chk = checkExample(w, w.example.de, lookup);
+    delete w.example.flagged;
+    delete w.example.later;
+    if (!chk.hasTarget || chk.later.length) {
+      w.example.flagged = true;
+      flagged++;
+    }
+    if (chk.later.length) w.example.later = chk.later;
+  }
+  console.log(`  examples: ${words.length - flagged} perfect, ${flagged} flagged (see npm run validate:words)`);
 
   const bank: WordBank = {
     version: 1,
@@ -349,7 +421,7 @@ export function stepAssemble(cands: CompactCandidate[]) {
   );
   const byLevel = words.reduce<Record<string, number>>((a, w) => ((a[w.cefr] = (a[w.cefr] ?? 0) + 1), a), {});
   console.log(`  wrote ${words.length} words to data/words.json (${JSON.stringify(byLevel)})`);
-  const pending = cands.filter((c) => c.rank <= LIMIT && !cache.has(c.key)).length;
+  const pending = cands.filter((c) => (c.rank <= LIMIT || c.supplement) && !cache.has(c.key)).length;
   if (pending) console.log(`  note: ${pending} candidates up to rank ${LIMIT} have no LLM review yet.`);
 }
 
@@ -360,11 +432,12 @@ async function main() {
   else cands = readCandidates();
   if (STEP === "candidates") return;
   if (STEP === "all" || STEP === "enrich") await stepEnrich(cands);
+  if (STEP === "all" || STEP === "assemble") stepAssemble(cands);
   if (STEP === "all" || STEP === "examples") {
     const { stepExamples } = await import("./lib/examples");
-    await stepExamples(cands, { model: MODEL });
+    const changed = await stepExamples({ model: MODEL, fixesFile: EXAMPLE_FIXES, wordsFile: WORDS_FILE });
+    if (changed) stepAssemble(cands);
   }
-  if (STEP === "all" || STEP === "assemble") stepAssemble(cands);
 }
 
 if (require.main === module) {

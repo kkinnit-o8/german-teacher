@@ -1,0 +1,61 @@
+{
+ "drop": [],
+ "items": {
+  "Macht|noun": {
+   "keep": true,
+   "drop_reason": null,
+   "lemma": "Macht",
+   "pos": "noun",
+   "display": "die Macht",
+   "meanings": [
+    "power"
+   ],
+   "cefr": "B1",
+   "topic": "society",
+   "reflexive": false,
+   "example": {
+    "de": "Geld ist keine Macht über mich.",
+    "en": "Money has no power over me."
+   },
+   "source": "claude"
+  },
+  "Rede|noun": {
+   "keep": true,
+   "drop_reason": null,
+   "lemma": "Rede",
+   "pos": "noun",
+   "display": "die Rede",
+   "meanings": [
+    "speech",
+    "talk"
+   ],
+   "cefr": "B1",
+   "topic": "communication",
+   "reflexive": false,
+   "example": {
+    "de": "Die Rede war sehr lang.",
+    "en": "The speech was very long."
+   },
+   "source": "claude"
+  },
+  "Recht|noun": {
+   "keep": true,
+   "drop_reason": null,
+   "lemma": "Recht",
+   "pos": "noun",
+   "display": "das Recht",
+   "meanings": [
+    "right",
+    "law"
+   ],
+   "cefr": "B1",
+   "topic": "society",
+   "reflexive": false,
+   "example": {
+    "de": "Jeder Mensch hat das Recht auf Arbeit.",
+    "en": "Every person has the right to work."
+   },
+   "source": "claude"
+  }
+ }
+}

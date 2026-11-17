@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { connection } from "next/server";
 import Link from "next/link";
 import { wordBank } from "@/lib/server/words";
+import { Reader } from "@/components/reader";
 
 async function Overview() {
   await connection();
@@ -26,6 +27,7 @@ export default function TodayPage() {
       <Suspense fallback={<p className="text-muted">Loading…</p>}>
         <Overview />
       </Suspense>
+      <Reader />
     </div>
   );
 }

@@ -57,7 +57,7 @@ To rebuild it yourself, put your key in `.env.local` (see below) and run:
 npm run build:words
 ```
 
-Useful options: `npm run build:words -- --step assemble` (no LLM calls), `--limit 2700` (how many candidates to
+Useful options: `npm run build:words -- --step assemble` (no LLM calls), `--limit 3000` (how many candidates to
 review), `--max-words 2400`, `--model <openrouter model id>`.
 
 ### The dictionary
@@ -74,6 +74,28 @@ npm run build:dict
 This downloads the raw data into `data/raw/` (git-ignored) and streams it. kaikki.org has marked its per-language file
 as deprecated; if it disappears, the script falls back to the full English Wiktionary dump (2.9 GB compressed) and
 keeps only the German entries while streaming.
+
+## How unlearned words are shown
+
+The teacher writes normal German. A deterministic renderer (not the AI) decides what to show:
+
+1. **Tokenize** into words, numbers and punctuation; expand contractions (im = in + dem, zum, zur, ins, beim, vom,
+   ans, aufs …) and clitic *'s* (geht's = geht + es).
+2. **Lemmatize** each word with a form → lemma table from the dictionary (gehe, ging, gegangen → gehen), using
+   capitalisation and small, tested context rules: *sein* (to be / his), *Weg/weg*, *Essen/essen*, *Sie/sie*,
+   *ihr* (you all / her / their), *meine* (my / I mean), verbs right after their subject (ich weiß), and nouns vs.
+   verbs at the start of a sentence.
+3. **Separable verbs**: in *Ich rufe dich morgen an*, *rufe … an* is *anrufen*. Both parts count as one word, are
+   styled together and open the same popup. Subordinate clauses (*weil ich dich anrufe*), zu-infinitives
+   (*anzurufen*) and participles (*angerufen*) work too.
+4. **Learned** words (introduced in a Learn step) are plain text. A word that is not in the word bank, such as the
+   compound *Kinderzimmer*, counts as known only if it splits completely into learned words (linking -s-, -n-, -en-,
+   -e-, -er- allowed).
+5. **Unlearned** words get a dotted underline and a short English gloss above them (ruby text). Punctuation, numbers,
+   names and English pass through unchanged. Nouns and their articles are coloured by gender.
+
+The code lives in `src/lib/german/` and is covered by unit tests (`npm test`). `npm run validate:words` checks every
+example sentence in the word bank with the same lemmatizer.
 
 ## Your OpenRouter key
 

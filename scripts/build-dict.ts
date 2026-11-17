@@ -157,6 +157,32 @@ async function main() {
   }
   console.log(`Folded ${folded} extra forms from form-of entries`);
 
+  // resolve "@female:Freund" style meanings from derivational form-of senses
+  const meaningByWord = new Map<string, string>();
+  for (const e of entries) {
+    const m = e.m.find((x) => !x.startsWith("@"));
+    if (m && !meaningByWord.has(e.w)) meaningByWord.set(e.w, m);
+  }
+  const firstMeaning = (w: string) => meaningByWord.get(w);
+  for (const e of entries) {
+    e.m = e.m
+      .map((m) => {
+        const r = m.match(/^@(\w+):(.+)$/);
+        if (!r) return m;
+        const base = firstMeaning(r[2]);
+        if (!base) return "";
+        if (r[1] === "female") return `${base} (female)`;
+        if (r[1] === "male") return `${base} (male)`;
+        if (r[1] === "dim") return `little ${base}`;
+        if (r[1] === "agent") return base.startsWith("to ") ? `one who ${base.slice(3)}s` : base;
+        return base;
+      })
+      .filter(Boolean);
+  }
+  const resolvedEntries = entries.filter((e) => e.m.length);
+  entries.length = 0;
+  entries.push(...resolvedEntries);
+
   // keep entries that occur in everyday text (any form in the wordfreq top list),
   // and every function word
   const ALWAYS = new Set(["pron", "det", "art", "prep", "conj", "num", "part", "intj"]);

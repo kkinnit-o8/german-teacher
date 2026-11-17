@@ -69,11 +69,16 @@ interface Hit {
   code: string;
 }
 
+const AUX = new Set(["sein", "haben", "werden", "können", "müssen", "sollen", "wollen", "dürfen", "mögen", "möchten"]);
+
+export const fold = (s: string) => s.toLowerCase().replace(/ß/g, "ss");
+
 export function buildCandidates(entries: DictEntry[], freq: Map<string, number>): Candidate[] {
   // lowercase form -> hits
   const index = new Map<string, Hit[]>();
+  // wordfreq case-folds its keys (ß -> ss), so fold dictionary forms the same way
   const add = (form: string, entry: DictEntry, code: string) => {
-    const k = form.toLowerCase();
+    const k = fold(form);
     const list = index.get(k);
     if (list) {
       if (!list.some((h) => h.entry === entry)) list.push({ entry, code });
@@ -95,9 +100,9 @@ export function buildCandidates(entries: DictEntry[], freq: Map<string, number>)
     else groups.set(e.w, [e]);
   }
 
-  const scoreByLemma = new Map<string, number>(); // lemma string or family key
-  const formsByLemma = new Map<string, Map<string, number>>();
-  const posScore = new Map<string, Map<Pos, number>>();
+  let scoreByLemma = new Map<string, number>(); // lemma string or family key
+  let formsByLemma = new Map<string, Map<string, number>>();
+  let posScore = new Map<string, Map<Pos, number>>();
   const credit = (lemma: string, form: string, amount: number, pos?: Pos) => {
     scoreByLemma.set(lemma, (scoreByLemma.get(lemma) ?? 0) + amount);
     let fm = formsByLemma.get(lemma);
@@ -110,65 +115,97 @@ export function buildCandidates(entries: DictEntry[], freq: Map<string, number>)
     }
   };
 
-  const familyKeyFor = (k: string) => (k.includes("|") ? k : k);
+  /**
+   * Distribute every form's frequency over the lemmas it can belong to.
+   * `dominant`: very common lowercase words; a capitalised noun that is spelled
+   * like one of their forms (die Würde ~ würde, das Aber ~ aber) gets little weight.
+   */
+  const run = (dominant: Set<string> | null) => {
+    scoreByLemma = new Map();
+    formsByLemma = new Map();
+    posScore = new Map();
+    for (const [form, f] of freq) {
+      // keys are case-folded by wordfreq ("strasse" for Straße)
+      if (!/^[a-zäöüß]+$/.test(form)) continue;
 
-  for (const [form, f] of freq) {
-    if (!/^[a-zäöüß]+$/.test(form)) continue;
-
-    if (CONTRACTIONS[form]) {
-      const [prep] = CONTRACTIONS[form];
-      credit(prep, form, f, "prep");
-      credit("der|art", form, f);
-      continue;
-    }
-
-    const families = FAMILY_FORMS.get(form);
-    const shares = AMBIGUOUS_FORM_SHARES[form];
-    if (shares) {
-      for (const [key, share] of Object.entries(shares)) {
-        const [lemma, pos] = key.split("|");
-        if (FUNCTION_FAMILIES.some((x) => x.key === key)) credit(key, form, f * share);
-        else credit(lemma, form, f * share, pos as Pos);
+      if (CONTRACTIONS[form]) {
+        const [prep] = CONTRACTIONS[form];
+        credit(prep, form, f, "prep");
+        credit("der|art", form, f);
+        continue;
       }
-      continue;
-    }
-    if (families) {
-      for (const key of families) credit(familyKeyFor(key), form, f / families.length);
-      continue;
-    }
 
-    const hits = index.get(form);
-    if (!hits?.length) continue;
-    const isVerbInfinitive = hits.some((h) => h.entry.p === "verb" && (h.code === "lemma" || h.code === "inf"));
-    const CLOSED: Pos[] = ["conj", "prep", "det", "pron", "art", "part", "num", "adv", "intj"];
-    const lowerLemmaClosed = hits.some((h) => h.code === "lemma" && h.entry.w === form && CLOSED.includes(h.entry.p));
-    const lowerInflected = hits.some(
-      (h) => h.code !== "lemma" && h.code !== "alt" && h.entry.w[0] === h.entry.w[0].toLowerCase(),
-    );
-    const weights = hits.map((h) => {
-      let w = POS_PRIOR[h.entry.p] * tagFactor(h.entry.tg);
-      if (h.code === "lemma") w *= 1.5;
-      if (h.code === "alt") w *= 0.15;
-      // short imperatives (geh, mal, schon) collide with frequent words
-      if (h.code === "imp2s" || h.code === "imp2p") w *= 0.05;
-      const capNoun = h.entry.p === "noun" && h.entry.w[0] !== h.entry.w[0].toLowerCase();
-      if (capNoun && h.entry.w.toLowerCase() === form) {
-        // nominalised infinitive (das Essen) when the verb also matches
-        if (isVerbInfinitive) w *= 0.35;
-        // das Aber, das Wenn, der Als: nouns copying a function word
-        else if (lowerLemmaClosed) w *= 0.05;
-        // die Würde vs würde (werden), der Erste vs erste: mostly the lowercase word
-        else if (lowerInflected) w *= 0.12;
+      const families = FAMILY_FORMS.get(form);
+      const shares = AMBIGUOUS_FORM_SHARES[form];
+      if (shares) {
+        for (const [key, share] of Object.entries(shares)) {
+          const [lemma, pos] = key.split("|");
+          if (FUNCTION_FAMILIES.some((x) => x.key === key)) credit(key, form, f * share);
+          else credit(lemma, form, f * share, pos as Pos);
+        }
+        continue;
       }
-      return w;
-    });
-    const total = weights.reduce((a, b) => a + b, 0);
-    if (!total) continue;
-    hits.forEach((h, i) => {
-      if (!weights[i]) return;
-      credit(h.entry.w, form, (f * weights[i]) / total, h.entry.p);
-    });
-  }
+      if (families) {
+        for (const key of families) credit(key, form, f / families.length);
+        continue;
+      }
+
+      const hits = index.get(form);
+      if (!hits?.length) continue;
+      const isVerbInfinitive = hits.some((h) => h.entry.p === "verb" && (h.code === "lemma" || h.code === "inf"));
+      // very common lowercase words this form can be: function words and auxiliary/modal verb forms
+      const CLOSED_POS: Pos[] = ["conj", "prep", "det", "pron", "art", "part", "num", "adv", "intj"];
+      const lowerHits = hits.filter(
+        (h) =>
+          dominant !== null &&
+          h.entry.w[0] === h.entry.w[0].toLowerCase() &&
+          h.code !== "alt" &&
+          !/^(imp|k1_)/.test(h.code) &&
+          dominant.has(h.entry.w),
+      );
+      const collidesClosed = lowerHits.some((h) => CLOSED_POS.includes(h.entry.p));
+      const collidesAux = lowerHits.some((h) => h.entry.p === "verb" && AUX.has(h.entry.w));
+      const weights = hits.map((h) => {
+        let w = POS_PRIOR[h.entry.p] * tagFactor(h.entry.tg);
+        if (h.code === "lemma") w *= 1.5;
+        if (h.code === "alt") w *= 0.15;
+        // short imperatives (geh, mal, schon) collide with frequent words
+        if (h.code === "imp2s" || h.code === "imp2p") w *= 0.05;
+        const capNoun = h.entry.p === "noun" && h.entry.w[0] !== h.entry.w[0].toLowerCase();
+        if (capNoun) {
+          const lemmaForm = fold(h.entry.w) === form;
+          const neuter = h.entry.g?.[0] === "n";
+          // nominalised infinitive (das Essen) when the verb also matches
+          if (lemmaForm && isVerbInfinitive) w *= 0.35;
+          // die Würde ~ würde, das Muss ~ muss: forms of auxiliary and modal verbs win
+          else if (collidesAux) w *= 0.06;
+          // das Aber, das Ja ~ aber, ja: nominalised function words
+          else if (lemmaForm && collidesClosed && neuter) w *= 0.06;
+          // (den) Wegen ~ wegen: an inflected noun form spelled like a function word
+          else if (!lemmaForm && collidesClosed) w *= 0.1;
+        }
+        return w;
+      });
+      const total = weights.reduce((a, b) => a + b, 0);
+      if (!total) continue;
+      hits.forEach((h, i) => {
+        if (!weights[i]) return;
+        // show the real spelling of the form (straße, not strasse) in topForms
+        const shown = fold(h.entry.w) === form ? h.entry.w.toLowerCase() : form;
+        credit(h.entry.w, shown, (f * weights[i]) / total, h.entry.p);
+      });
+    }
+  };
+
+  run(null);
+  const dominant = new Set(
+    [...scoreByLemma.entries()]
+      .filter(([l]) => !l.includes("|") && l[0] === l[0].toLowerCase())
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 700)
+      .map(([l]) => l),
+  );
+  run(dominant);
 
   const out: Candidate[] = [];
   for (const [lemmaOrKey, rawScore] of scoreByLemma) {

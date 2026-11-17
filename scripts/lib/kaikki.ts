@@ -91,9 +91,60 @@ export function shortGloss(gloss: string): string {
   return g;
 }
 
-function senseIsFormOf(s: Raw): boolean {
+function senseIsFormOf(s: Raw, word?: string): boolean {
   const tags: string[] = s.tags ?? [];
+  if (isDerivational(s, word)) return false;
   return Boolean(s.form_of || s.alt_of) || tags.includes("form-of") || tags.includes("alt-of");
+}
+
+/**
+ * Wiktionary links some real words to others with "form-of" senses:
+ * "agent noun of lehren" (Lehrer), "female equivalent of Freund" (Freundin),
+ * "diminutive of Haus" (Häuschen). These are words of their own.
+ */
+const DERIVATIONAL =
+  /^(female equivalent|male equivalent|feminine equivalent|masculine equivalent|agent noun|diminutive|nominalization|abstract noun|verbal noun|augmentative|endearing|gerund|action noun|substantivation)/i;
+export function isDerivational(s: Raw, word?: string): boolean {
+  const g: string = s.glosses?.[0] ?? "";
+  if (!DERIVATIONAL.test(g)) return false;
+  // "das Machen" (nominalised machen) or "der Erste" (nominalised erste) is a form of the base word
+  const target: string | undefined = s.form_of?.[0]?.word;
+  if (word && target && /^(nominalization|verbal noun|gerund|substantivation)/i.test(g)) {
+    const w = word.toLowerCase();
+    const t = target.toLowerCase();
+    if (w === t || (w.startsWith(t.replace(/e$/, "")) && w.length - t.length <= 2)) return false;
+  }
+  return true;
+}
+
+/** Meaning for a derivational sense; "@rel:Target" placeholders are resolved in build-dict. */
+function derivationalMeaning(s: Raw): string {
+  const g: string = s.glosses?.[0] ?? "";
+  const target: string | undefined = s.form_of?.[0]?.word;
+  const extra: string | undefined = s.form_of?.[0]?.extra;
+  const isFemale = /^(female|feminine)/i.test(g);
+  const isMale = /^(male|masculine)/i.test(g);
+  if (extra) {
+    const segs = shortGloss(extra.replace(/^one who [^,]*,\s*/i, ""))
+      .split(",")
+      .map((x) => x.trim())
+      .filter(Boolean);
+    const shortOne = segs.find((x) => x.split(" ").length <= 2) ?? segs[0];
+    if (shortOne) return isFemale ? `${shortOne} (female)` : isMale ? `${shortOne} (male)` : shortOne;
+  }
+  const m = g.match(/\(“([^”]+)”\)/);
+  const rel = /^(female|feminine)/i.test(g)
+    ? "female"
+    : /^(male|masculine)/i.test(g)
+      ? "male"
+      : /^diminutive|^endearing/i.test(g)
+        ? "dim"
+        : /^agent/i.test(g)
+          ? "agent"
+          : "nom";
+  if (m && rel === "female") return `${m[1]} (female)`;
+  if (m && rel === "male") return `${m[1]} (male)`;
+  return target ? `@${rel}:${target}` : shortGloss(g);
 }
 
 export interface FormOfLink {
@@ -200,7 +251,7 @@ export function parseKaikki(raw: Raw): ParseResult {
   const senses: Raw[] = (raw.senses ?? []).filter((s: Raw) => (s.glosses ?? []).length || s.form_of);
   if (!senses.length) return { kind: "skip" };
 
-  const lemmaSenses = senses.filter((s) => !senseIsFormOf(s));
+  const lemmaSenses = senses.filter((s) => !senseIsFormOf(s, word));
   if (!lemmaSenses.length) {
     // pure form-of / alt-of entry, e.g. "ging" -> gehen
     const links: FormOfLink[] = [];
@@ -228,6 +279,12 @@ export function parseKaikki(raw: Raw): ParseResult {
   const meanings: string[] = [];
   for (const s of useSenses) {
     const gl: string[] = s.glosses ?? [];
+    if (isDerivational(s, word)) {
+      const dm = derivationalMeaning(s);
+      if (dm && !meanings.includes(dm)) meanings.push(dm);
+      if (meanings.length >= 5) break;
+      continue;
+    }
     let g = gl[0] ?? "";
     // "As a copulative verb" / "Used to ..." are headers; the real meaning follows
     if (gl.length > 1 && /^(As an? |Used |Forms |In the sense )/i.test(g)) g = gl[1];
