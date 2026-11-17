@@ -37,6 +37,7 @@ git clone https://github.com/kkinnit-o8/german-teacher.git
 
 The first start takes a few minutes. The window:
 
+- puts a **German Teacher** shortcut with the app's icon on your desktop (the first time only),
 - checks that Node.js is installed (and tells you what to do if it isn't),
 - installs the app's packages (`npm install`) when needed,
 - asks for your **OpenRouter API key** if there is no `.env.local` file yet, and saves it there,
@@ -49,10 +50,13 @@ open with a message.
 Windows may ask whether Node.js may use the network: allow **private networks** if you want to use the app on your
 phone (see below).
 
-### 4. Desktop shortcut (optional)
+### 4. From now on: the desktop shortcut
 
-Double-click **`add-to-desktop.cmd`**. It creates a **German Teacher** shortcut with the app's icon on your desktop.
-From then on, just double-click the shortcut.
+Double-click **German Teacher** on your desktop to start the app. The shortcut runs `start.cmd`, so it works the same
+way.
+
+- Deleted the shortcut? It stays deleted. Double-click **`add-to-desktop.cmd`** to get it back.
+- Moved the app folder? Double-click `start.cmd` in the new place once, and the shortcut is updated.
 
 ### Your OpenRouter key
 

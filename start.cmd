@@ -4,6 +4,12 @@ setlocal
 cd /d "%~dp0"
 title German Teacher
 
+rem First start from this folder: put a "German Teacher" shortcut on the desktop
+rem (and point it here if the app folder was moved). Later starts skip this.
+set "SHORTCUT_FOR="
+if exist ".desktop-shortcut" set /p SHORTCUT_FOR=<".desktop-shortcut"
+if /i not "%SHORTCUT_FOR%"=="%CD%" powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0scripts\desktop-shortcut.ps1" 2>nul
+
 where node >nul 2>nul
 if errorlevel 1 (
   echo.

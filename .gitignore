@@ -20,8 +20,8 @@ next-env.d.ts
 # raw dictionary downloads (large; rebuilt with npm run build:dict)
 /data/raw/
 
-# build markers written by start.cmd
-/.build-stamp
+# written by start.cmd: the folder the desktop shortcut was made for
+/.desktop-shortcut
 
 # testing
 /coverage
