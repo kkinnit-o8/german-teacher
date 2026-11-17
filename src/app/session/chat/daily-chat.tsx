@@ -42,6 +42,7 @@ export function DailyChat() {
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<ChatError | null>(null);
+  const [justStarted, setJustStarted] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -69,7 +70,10 @@ export function DailyChat() {
       });
       const j = (await r.json()) as { conversation?: ConversationView; error?: ChatError };
       if (j.error) setError(j.error);
-      if (j.conversation?.messages.length) setConv(j.conversation);
+      if (j.conversation?.messages.length) {
+        setJustStarted(true);
+        setConv(j.conversation);
+      }
     } catch {
       setError({ message: "The app's server did not answer.", kind: "network" });
     } finally {
@@ -89,7 +93,7 @@ export function DailyChat() {
       {loading ? (
         <p className="text-muted">Loading…</p>
       ) : conv ? (
-        <ChatView conversation={conv} onChange={setConv} />
+        <ChatView conversation={conv} onChange={setConv} justStarted={justStarted} />
       ) : (
         <>
           <p className="text-muted">

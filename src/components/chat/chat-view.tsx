@@ -7,8 +7,10 @@ import { primeAnalysis } from "@/lib/client/analysis";
 import { useAppState } from "../app-state";
 import { GermanText } from "../german-text";
 import { useSpeech } from "../use-speech";
-import { IconArrowRight, IconBulb, IconCheck, IconPlus, IconSpeaker, IconTranslate } from "../icons";
+import { IconArrowRight, IconBulb, IconCheck, IconMic, IconPlus, IconSpeaker, IconTranslate } from "../icons";
+import { MIC_HELP, useSpeechInput } from "../use-speech-input";
 import { ChatInput } from "./chat-input";
+import { MicButton } from "./mic-button";
 
 export interface ChatError {
   message: string;
@@ -17,22 +19,17 @@ export interface ChatError {
 
 interface Props {
   conversation: ConversationView;
+  /** the conversation was just started: read the opening message aloud */
+  justStarted?: boolean;
   /** read-only: rereading a past chat */
   readOnly?: boolean;
   onChange?: (c: ConversationView) => void;
 }
 
-function TeacherBubble({ m, autoplay }: { m: ChatMessageView; autoplay: boolean }) {
+function TeacherBubble({ m }: { m: ChatMessageView }) {
   const [showTr, setShowTr] = useState(false);
   const [showHint, setShowHint] = useState(false);
   const { speak, silent } = useSpeech();
-  const played = useRef(false);
-  useEffect(() => {
-    if (autoplay && !played.current && !m.raw) {
-      played.current = true;
-      speak(m.text);
-    }
-  }, [autoplay, m.text, m.raw, speak]);
 
   return (
     <div className="flex justify-start" data-testid="teacher-message">
@@ -159,15 +156,30 @@ export function WordsFromChat({ conversation }: { conversation: ConversationView
   );
 }
 
-export function ChatView({ conversation, readOnly, onChange }: Props) {
+export function ChatView({ conversation, readOnly, onChange, justStarted }: Props) {
   const [conv, setConv] = useState(conversation);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<ChatError | null>(null);
   const [keepChatting, setKeepChatting] = useState(conversation.exchanges > conversation.target);
-  const [freshIds, setFreshIds] = useState<Set<number>>(new Set());
-  const { settings } = useAppState();
-  const { silent } = useSpeech();
+  const [freshIds, setFreshIds] = useState<Set<number>>(() =>
+    justStarted ? new Set(conversation.messages.filter((m) => m.role === "teacher").map((m) => m.id)) : new Set(),
+  );
+  const { settings, device, setDevice } = useAppState();
+  const { speak, silent } = useSpeech();
   const endRef = useRef<HTMLDivElement>(null);
+  const [draft, setDraft] = useState("");
+  const sendRef = useRef<(t: string) => Promise<boolean>>(async () => false);
+  const speakingMode = device.speakingMode && !silent;
+  const mic = useSpeechInput({
+    onText: setDraft,
+    // speaking mode: the message is sent as soon as you stop talking
+    onFinal: (text) => {
+      if (speakingMode && text.trim()) {
+        setDraft("");
+        sendRef.current(text);
+      }
+    },
+  });
 
   const update = useCallback(
     (c: ConversationView, fresh = false) => {
@@ -215,6 +227,24 @@ export function ChatView({ conversation, readOnly, onChange }: Props) {
 
   const targetReached = conv.exchanges >= conv.target;
   const showInput = !readOnly && (!targetReached || keepChatting || conv.kind === "free");
+  useEffect(() => {
+    sendRef.current = send;
+  });
+
+  // auto-speak new teacher messages; in speaking mode, open the mic afterwards
+  const spokenRef = useRef<number | null>(null);
+  const { start: startMic } = mic;
+  useEffect(() => {
+    if (readOnly || silent) return;
+    const fresh = conv.messages.filter((m) => m.role === "teacher" && freshIds.has(m.id) && !m.raw);
+    const last = fresh[fresh.length - 1];
+    if (!last || spokenRef.current === last.id) return;
+    if (!settings.autoSpeak && !speakingMode) return;
+    spokenRef.current = last.id;
+    speak(last.text).then(() => {
+      if (speakingMode && showInput) startMic();
+    });
+  }, [conv.messages, freshIds, readOnly, silent, settings.autoSpeak, speakingMode, showInput, speak, startMic]);
 
   return (
     <div className="grid gap-4 lg:grid-cols-[1fr_17rem]">
@@ -228,12 +258,28 @@ export function ChatView({ conversation, readOnly, onChange }: Props) {
             </span>
           )}
           {conv.cost > 0 && <span className="chip" title="Approximate cost of this conversation on OpenRouter">≈ ${conv.cost.toFixed(4)}</span>}
+          {!readOnly && (
+            <button
+              className={`btn btn-sm ml-auto ${speakingMode ? "btn-primary" : ""}`}
+              onClick={() => setDevice({ speakingMode: !device.speakingMode })}
+              disabled={silent || mic.availability === "insecure" || mic.availability === "unsupported"}
+              aria-pressed={speakingMode}
+              title={
+                silent
+                  ? "Speaking mode needs sound: turn off silent mode first"
+                  : "Hands-free: the teacher's reply is read aloud, then the microphone opens, and your message is sent when you stop talking"
+              }
+              data-testid="speaking-mode"
+            >
+              <IconMic size={16} /> Speaking mode {speakingMode ? "on" : "off"}
+            </button>
+          )}
         </div>
 
         <div className="space-y-4" aria-live="polite">
           {conv.messages.map((m) =>
             m.role === "teacher" ? (
-              <TeacherBubble key={m.id} m={m} autoplay={freshIds.has(m.id) && settings.autoSpeak && !silent && !readOnly} />
+              <TeacherBubble key={m.id} m={m} />
             ) : (
               <UserBubble key={m.id} m={m} />
             ),
@@ -283,7 +329,28 @@ export function ChatView({ conversation, readOnly, onChange }: Props) {
             </div>
           </div>
         )}
-        {showInput && <ChatInput onSend={send} disabled={busy || conv.pending} />}
+        {showInput && (
+          <ChatInput
+            value={draft}
+            onChange={setDraft}
+            onSend={send}
+            disabled={busy || conv.pending}
+            placeholder={mic.listening ? "Listening… speak German" : "Write in German…"}
+            extra={
+              <MicButton
+                listening={mic.listening}
+                availability={mic.availability}
+                onStart={() => mic.start()}
+                onStop={mic.stop}
+                disabled={busy}
+              />
+            }
+            note={
+              mic.error ??
+              (mic.availability === "insecure" || mic.availability === "unsupported" ? MIC_HELP[mic.availability] : undefined)
+            }
+          />
+        )}
       </section>
 
       <aside className="card h-fit space-y-3 p-4 lg:sticky lg:top-20">
