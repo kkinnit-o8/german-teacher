@@ -43,9 +43,8 @@ export function Header() {
     <header className="sticky top-0 z-30 border-b border-border bg-bg/90 backdrop-blur">
       <div className="mx-auto flex max-w-5xl items-center gap-2 px-4 py-2">
         <Link href="/" className="mr-2 flex items-center gap-2 font-bold tracking-tight" aria-label="German Teacher, home">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-accent text-sm font-black text-accent-text">
-            De
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.svg" alt="" width={32} height={32} className="h-8 w-8" />
           <span className="hidden sm:inline">German Teacher</span>
         </Link>
         <nav className="hidden flex-1 items-center gap-1 md:flex" aria-label="Main">
