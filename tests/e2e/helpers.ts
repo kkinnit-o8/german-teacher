@@ -1,4 +1,21 @@
-import { expect, type Page } from "@playwright/test";
+import { expect, test, type Locator, type Page } from "@playwright/test";
+
+/** Every test starts with empty progress and the real clock. */
+export function freshStart() {
+  test.beforeEach(async ({ request }) => {
+    const r = await request.post("/api/test/reset");
+    expect(r.ok()).toBeTruthy();
+  });
+}
+
+/** The visible German text of an element, without the ruby glosses. */
+export async function germanText(locator: Locator): Promise<string> {
+  return locator.evaluate((el) => {
+    const c = el.cloneNode(true) as HTMLElement;
+    c.querySelectorAll("rt, button").forEach((x) => x.remove());
+    return (c.textContent ?? "").replace(/\s+/g, " ").trim();
+  });
+}
 
 export async function moveClock(page: Page, days: number) {
   const r = await page.request.post("/api/test/clock", { data: { days } });

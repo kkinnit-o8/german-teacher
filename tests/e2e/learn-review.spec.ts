@@ -1,5 +1,7 @@
 import { expect, test } from "@playwright/test";
-import { answerQuiz, learnAll, moveClock } from "./helpers";
+import { answerQuiz, freshStart, learnAll, moveClock } from "./helpers";
+
+freshStart();
 
 test("learn new words, take the quick check, review them the next day", async ({ page }) => {
   await page.goto("/");

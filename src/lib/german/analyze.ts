@@ -40,9 +40,7 @@ interface Slot {
   chosen?: Cand;
 }
 
-const NOUN_LIKE: Pos[] = ["noun", "name"];
 const CLOSED: Pos[] = ["conj", "prep", "det", "pron", "art", "part", "num", "adv", "intj"];
-const PERSONAL = new Set(["ich", "du", "er", "sie", "es", "wir", "ihr", "man"]);
 const DETERMINER_FAMILIES = new Set([
   "der|art",
   "ein|art",
@@ -391,8 +389,6 @@ export function analyze(text: string, lex: Lexicon, words: WordLookup, opts: Ana
     if (c) s.chosen = c;
     return Boolean(c);
   };
-  const verbFormSlot = (s: Slot | undefined) =>
-    !!s && s.hits.some((h) => h.entry.p === "verb" && FINITE.test(h.code));
   const secondPluralVerb = (s: Slot | undefined) =>
     !!s &&
     (/^(seid|habt|könnt|wollt|müsst|sollt|dürft|mögt|wisst|wart|hattet|wart|werdet)$/.test(s.lower) ||

@@ -97,6 +97,17 @@ The teacher writes normal German. A deterministic renderer (not the AI) decides 
 The code lives in `src/lib/german/` and is covered by unit tests (`npm test`). `npm run validate:words` checks every
 example sentence in the word bank with the same lemmatizer.
 
+## The AI teacher
+
+The conversation step talks to a model on OpenRouter (default `anthropic/claude-haiku-5.5`; change it in Settings).
+Each request sends the list of words you have learned, today's new words (the teacher uses each one at least once),
+the topic, how many exchanges are left and a grammar level that grows with your vocabulary (present tense first;
+Perfekt, modal verbs and *weil/dass* later; Präteritum and relative clauses after about 800 words). The model answers
+in JSON (`reply`, `translation`, `correction`, `hint`) using OpenRouter's structured outputs where the model supports
+them; bad JSON is retried once and otherwise shown as plain text. Reasoning models run at their lowest effort. The
+approximate cost of each conversation is shown in the chat and on the Chats page; a daily session with the default
+model costs well under a cent.
+
 ## Your OpenRouter key
 
 Create a file called `.env.local` in the project folder containing one line:

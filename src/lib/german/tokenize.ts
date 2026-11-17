@@ -26,7 +26,7 @@ export function tokenize(text: string): Token[] {
     if (m[1]) out.push({ t: m[1], k: "x" });
     else if (m[2]) out.push({ t: m[2], k: "n" });
     else if (m[3]) {
-      let w = m[3];
+      const w = m[3];
       // a trailing apostrophe belongs to the word only for forms like hab' / geht's handled later
       if (w.endsWith("'") && !/[sS]'$/.test(w) && w.length > 1 && !/^(hab|geh|würd|hätt|könnt|wär)'$/i.test(w)) {
         out.push({ t: w.slice(0, -1), k: "w" }, { t: "'", k: "p" });
