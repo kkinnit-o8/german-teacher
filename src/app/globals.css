@@ -174,75 +174,77 @@ ruby.de-ruby rt {
   color: inherit;
 }
 
-/* ---------- small UI helpers ---------- */
+/* ---------- small UI helpers (in a layer, so Tailwind utilities can override them) ---------- */
+@layer components {
 
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-}
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
 
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  min-height: 2.75rem;
-  padding: 0.5rem 1.1rem;
-  border-radius: 12px;
-  font-weight: 600;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
-  transition: background-color 0.12s, border-color 0.12s, opacity 0.12s;
-}
-.btn:hover:not(:disabled) {
-  background: var(--surface-2);
-}
-.btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-.btn-primary {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--accent-text);
-}
-.btn-primary:hover:not(:disabled) {
-  background: var(--accent);
-  opacity: 0.9;
-}
-.btn-ghost {
-  border-color: transparent;
-  background: transparent;
-}
-.btn-sm {
-  min-height: 2.1rem;
-  padding: 0.25rem 0.7rem;
-  font-size: 0.85rem;
-  border-radius: 10px;
-}
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    min-height: 2.75rem;
+    padding: 0.5rem 1.1rem;
+    border-radius: 12px;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    transition: background-color 0.12s, border-color 0.12s, opacity 0.12s;
+  }
+  .btn:hover:not(:disabled) {
+    background: var(--surface-2);
+  }
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .btn-primary {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--accent-text);
+  }
+  .btn-primary:hover:not(:disabled) {
+    background: var(--accent);
+    opacity: 0.9;
+  }
+  .btn-ghost {
+    border-color: transparent;
+    background: transparent;
+  }
+  .btn-sm {
+    min-height: 2.1rem;
+    padding: 0.25rem 0.7rem;
+    font-size: 0.85rem;
+    border-radius: 10px;
+  }
 
-.input {
-  width: 100%;
-  min-height: 2.75rem;
-  padding: 0.5rem 0.8rem;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
-}
+  .input {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+  }
 
-.chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  padding: 0.1rem 0.6rem;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  border: 1px solid var(--border);
-  background: var(--surface-2);
-  color: var(--muted);
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.1rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    border: 1px solid var(--border);
+    background: var(--surface-2);
+    color: var(--muted);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

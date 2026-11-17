@@ -9,9 +9,10 @@ import { getDb } from "./db";
 import { dictEntry, entriesByLemma } from "./dictionary-db";
 import { CUSTOM_ID_START, getWord, invalidateWords, wordIndex } from "./words";
 import { shortGlossText } from "../german/analyze";
+import { now as clockNow } from "./clock";
 
 function nowIso() {
-  return new Date().toISOString();
+  return clockNow().toISOString();
 }
 
 /** Turn a dictionary entry into a custom word (or return the existing word for it). */

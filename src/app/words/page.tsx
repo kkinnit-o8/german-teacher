@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { connection } from "next/server";
 import { allWords } from "@/lib/server/words";
 import { WordList, type WordRow } from "./word-list";
+import { Reader } from "@/components/reader";
 
 export const metadata: Metadata = { title: "Words" };
 
@@ -29,6 +30,7 @@ export default function WordsPage() {
       <Suspense fallback={<p className="text-muted">Loading words…</p>}>
         <Content />
       </Suspense>
+      <Reader />
     </div>
   );
 }
